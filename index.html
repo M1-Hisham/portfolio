@@ -195,6 +195,39 @@
             align-items: center;
         }
 
+        /* Menu Toggle Button (Hamburger) */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 26px;
+            height: 18px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 1010;
+        }
+
+        .menu-toggle span {
+            width: 100%;
+            height: 2px;
+            background-color: #ffffff;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .menu-toggle.open span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+            background-color: var(--primary);
+        }
+        .menu-toggle.open span:nth-child(2) {
+            opacity: 0;
+        }
+        .menu-toggle.open span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+            background-color: var(--primary);
+        }
+
         .nav-link {
             color: var(--text-secondary);
             text-decoration: none;
@@ -497,7 +530,7 @@
         /* ==================== SKILLS SECTION ==================== */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
             margin-top: 20px;
         }
@@ -765,8 +798,8 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 28px;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            gap: 24px;
         }
 
         .project-card {
@@ -925,7 +958,7 @@
 
         .cert-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
             margin-top: 20px;
             max-width: 800px;
@@ -1074,6 +1107,46 @@
             }
         }
 
+        @media (max-width: 900px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: rgba(5, 5, 8, 0.96);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-left: 1px solid var(--border);
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+                padding: 40px;
+                transition: var(--transition);
+                z-index: 1005;
+                align-items: flex-start;
+            }
+
+            .nav-menu.active {
+                right: 0;
+                box-shadow: -10px 0 30px rgba(0, 240, 255, 0.15);
+            }
+
+            .nav-link {
+                font-size: 1.1rem;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .nav-link::after {
+                display: none;
+            }
+        }
+
         @media (max-width: 768px) {
             .section {
                 padding: 80px 0;
@@ -1081,14 +1154,6 @@
 
             nav {
                 height: 70px;
-            }
-
-            .nav-menu {
-                gap: 16px;
-            }
-
-            .nav-link {
-                font-size: 0.8rem;
             }
 
             .hero-layout {
@@ -1149,9 +1214,6 @@
             .nav-container {
                 padding: 0 16px;
             }
-            .nav-menu {
-                gap: 12px;
-            }
             .logo {
                 font-size: 1.15rem;
             }
@@ -1174,7 +1236,12 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="#hero" class="logo">Mohamed <span>Hisham</span></a>
-            <div class="nav-menu">
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-menu" id="navMenu">
                 <a href="#hero" class="nav-link active">Home</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#skills" class="nav-link">Skills</a>
@@ -1200,6 +1267,15 @@
                     </p>
                     <div class="typing-container">
                         <span class="prompt">~/hisham$</span> tech-stack --load <span class="typing" id="typingText">Flutter</span>
+                    </div>
+                    <div style="margin-bottom: 30px; display: flex; gap: 20px; flex-wrap: wrap;">
+                        <a href="https://play.google.com/store/apps/developer?id=M1Hisham" target="_blank" style="color: var(--primary); text-decoration: none; font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: var(--transition);" onmouseover="this.style.color='var(--secondary)'" onmouseout="this.style.color='var(--primary)'">
+                            <span>🤖</span> Google Play Profile
+                        </a>
+                        <span style="color: var(--border);">|</span>
+                        <a href="https://apps.apple.com/us/developer/mohamed-hisham/id1820654983" target="_blank" style="color: var(--primary); text-decoration: none; font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: var(--transition);" onmouseover="this.style.color='var(--secondary)'" onmouseout="this.style.color='var(--primary)'">
+                            <span>🍎</span> App Store Profile
+                        </a>
                     </div>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">View Featured Projects</a>
@@ -1524,6 +1600,14 @@
                         <span class="icon">🐙</span>
                         <span>github.com/M1-Hisham</span>
                     </a>
+                    <a href="https://play.google.com/store/apps/developer?id=M1Hisham" target="_blank" class="contact-link">
+                        <span class="icon">🤖</span>
+                        <span>Google Play Profile</span>
+                    </a>
+                    <a href="https://apps.apple.com/us/developer/mohamed-hisham/id1820654983" target="_blank" class="contact-link">
+                        <span class="icon">🍎</span>
+                        <span>App Store Profile</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1538,24 +1622,43 @@
 
     <!-- ========== [START SCRIPT SECTION] ========== -->
     <script>
+        // ==================== MOBILE HAMBURGER MENU ====================
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        const navLinksList = document.querySelectorAll('.nav-link');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('open');
+            navMenu.classList.toggle('active');
+        });
+
+        navLinksList.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('open');
+                navMenu.classList.remove('active');
+            });
+        });
+
         // ==================== PROJECTS DATA ====================
         const projects = [
             {
-                name: "Real-Time Auction Marketplace",
-                description: "AI-assisted architecture planning and boilerplate generation enabled rapid delivery of live bidding with sub-second WebSocket sync and PCI-compliant payment checkout (Mzaodin).",
+                name: "Mzaodin - مزاودين (Real-Time Auction)",
+                description: "AI-assisted architecture planning and boilerplate generation enabled rapid delivery of live bidding with sub-second WebSocket sync and PCI-compliant payment checkout.",
                 tech: "Flutter, MVVM, Cubit, WebSocket, Tap Payment, Laravel",
                 category: "ai-assisted, mobile",
                 links: {
-                    appstore: "https://apps.apple.com/app/id6746045792",
+                    appstore: "https://apps.apple.com/us/app/mzaodin-%D9%85%D8%B2%D8%A7%D9%88%D8%AF%D9%8A%D9%86/id6746045792",
                     playstore: "https://play.google.com/store/apps/details?id=com.mzaodin.app"
                 }
             },
             {
-                name: "QR-Based Compound Gate Management System",
+                name: "QR-Based Compound Gate Management System (Al-Karma - الكرمة)",
                 description: "Three separate apps (Owner / Admin / Security) prototyped and scaffolded using AI tooling, with full QR scan pipelines and role-based access control delivered at high speed.",
                 tech: "Flutter, Firebase, Multi-Role, Clean Architecture",
                 category: "ai-assisted, mobile",
-                links: {}
+                links: {
+                    appstore: "https://apps.apple.com/us/app/al-karma-%D8%A7%D9%84%D9%83%D8%B1%D9%85%D8%A9/id6768489422"
+                }
             },
             {
                 name: "E-Commerce Multi-App Ecosystem",
@@ -1563,6 +1666,25 @@
                 tech: "Flutter, Firebase, Clean Architecture",
                 category: "ai-assisted, mobile",
                 links: {}
+            },
+            {
+                name: "Medaad - مـــداد",
+                description: "Secure teacher-student platform with screen protection for educational content.",
+                tech: "Flutter, Supabase, Secure iOS & Android",
+                category: "mobile",
+                links: {
+                    appstore: "https://apps.apple.com/us/app/medaad-%D9%85%D9%80%D9%80%D9%80%D8%AF%D8%A7%D8%AF/id6758565779",
+                    playstore: "https://play.google.com/store/apps/details?id=medaad.app.com"
+                }
+            },
+            {
+                name: "Sign for Real Estate",
+                description: "Real estate signing application allowing secure property contract creation, digital signature pipelines, and transaction tracking.",
+                tech: "Flutter, RESTful API, PDF Signing, iOS",
+                category: "mobile",
+                links: {
+                    appstore: "https://apps.apple.com/app/id6763954450"
+                }
             },
             {
                 name: "Café & Restaurant Dashboard + Interactive Menu",
