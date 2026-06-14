@@ -382,6 +382,57 @@
             box-shadow: 0 4px 15px rgba(0, 240, 255, 0.15);
         }
 
+        .profile-btn {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 24px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            text-decoration: none;
+            transition: var(--transition);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .profile-btn.play-store:hover {
+            border-color: var(--primary);
+            background: rgba(0, 240, 255, 0.04);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 240, 255, 0.15);
+        }
+
+        .profile-btn.app-store:hover {
+            border-color: var(--secondary);
+            background: rgba(168, 85, 247, 0.04);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(168, 85, 247, 0.15);
+        }
+
+        .profile-btn-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+
+        .profile-btn-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+            font-family: var(--font-display);
+        }
+        
+        .profile-btn.play-store:hover .profile-btn-title {
+            color: var(--primary);
+        }
+
+        .profile-btn.app-store:hover .profile-btn-title {
+            color: var(--secondary);
+        }
+
         /* ==================== HERO SECTION ==================== */
         .hero {
             padding-top: 140px;
@@ -1268,13 +1319,20 @@
                     <div class="typing-container">
                         <span class="prompt">~/hisham$</span> tech-stack --load <span class="typing" id="typingText">Flutter</span>
                     </div>
-                    <div style="margin-bottom: 30px; display: flex; gap: 20px; flex-wrap: wrap;">
-                        <a href="https://play.google.com/store/apps/developer?id=M1Hisham" target="_blank" style="color: var(--primary); text-decoration: none; font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: var(--transition);" onmouseover="this.style.color='var(--secondary)'" onmouseout="this.style.color='var(--primary)'">
-                            <span>🤖</span> Google Play Profile
+                    <div style="margin-bottom: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; max-width: 500px;">
+                        <a href="https://play.google.com/store/apps/developer?id=M1Hisham" target="_blank" class="profile-btn play-store">
+                            <span style="font-size: 1.8rem;">🤖</span>
+                            <div>
+                                <div class="profile-btn-label">Developer Profile</div>
+                                <div class="profile-btn-title">Google Play</div>
+                            </div>
                         </a>
-                        <span style="color: var(--border);">|</span>
-                        <a href="https://apps.apple.com/us/developer/mohamed-hisham/id1820654983" target="_blank" style="color: var(--primary); text-decoration: none; font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: var(--transition);" onmouseover="this.style.color='var(--secondary)'" onmouseout="this.style.color='var(--primary)'">
-                            <span>🍎</span> App Store Profile
+                        <a href="https://apps.apple.com/us/developer/mohamed-hisham/id1820654983" target="_blank" class="profile-btn app-store">
+                            <span style="font-size: 1.8rem;">🍎</span>
+                            <div>
+                                <div class="profile-btn-label">Developer Profile</div>
+                                <div class="profile-btn-title">App Store</div>
+                            </div>
                         </a>
                     </div>
                     <div class="hero-buttons">
