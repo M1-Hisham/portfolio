@@ -4,34 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Hisham - Software Engineer | Flutter & AI-Assisted Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <title>Mohamed Hisham | Senior Mobile & SaaS Architect - 16+ Production Apps</title>
+    <meta name="description" content="Mohamed Hisham - Senior Software Engineer & Mobile Architect specializing in Flutter, Multi-App Ecosystems, and AI-driven development. Shipped 16+ production apps to App Store & Google Play.">
+    <meta name="keywords" content="Flutter Developer, Mobile App Architect, iOS Development, Android Development, App Store Publishing, SaaS Developer, Mohamed Hisham">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Mohamed Hisham | Senior Mobile & SaaS Architect">
+    <meta property="og:description" content="Shipped 16+ production apps on Apple App Store & Google Play with 2x velocity through AI-driven engineering.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://play-lh.googleusercontent.com/19wgaYHLC8kyIxxoJxc8KxaSN497LOr_hfhFj9fNsg_wCnsMT6Cs4Yr3Q92R9Wo8MyJZ_5DyesiiJ1RsOopKqog=w416-h235">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <style>
         /* ==================== VARIABLES & THEME ==================== */
         :root {
-            --bg-dark: #050508;
-            --bg-darker: #020203;
-            --bg-surface: rgba(13, 15, 28, 0.65);
-            --bg-card: rgba(18, 20, 38, 0.45);
+            --bg-dark: #040407;
+            --bg-darker: #020204;
+            --bg-surface: rgba(14, 16, 28, 0.7);
+            --bg-card: rgba(19, 23, 42, 0.55);
+            --bg-card-hover: rgba(26, 31, 58, 0.75);
             --primary: #00f0ff;
-            --primary-glow: rgba(0, 240, 255, 0.15);
+            --primary-glow: rgba(0, 240, 255, 0.18);
+            --primary-border: rgba(0, 240, 255, 0.28);
             --secondary: #a855f7;
-            --secondary-glow: rgba(168, 85, 247, 0.15);
+            --secondary-glow: rgba(168, 85, 247, 0.18);
             --accent: #6366f1;
-            --text-primary: #f4f4f9;
+            --success: #10b981;
+            --success-glow: rgba(16, 185, 129, 0.2);
+            --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
             --text-muted: #64748b;
-            --border: rgba(255, 255, 255, 0.06);
-            --border-hover: rgba(0, 240, 255, 0.25);
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(0, 240, 255, 0.35);
             --font-display: 'Outfit', sans-serif;
             --font-sans: 'Plus Jakarta Sans', sans-serif;
             --font-mono: 'JetBrains Mono', monospace;
-            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --radius-full: 9999px;
         }
 
         /* ==================== RESET & BASE ==================== */
-        * {
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -47,12 +67,12 @@
             font-family: var(--font-sans);
             background-color: var(--bg-dark);
             color: var(--text-primary);
-            line-height: 1.6;
+            line-height: 1.65;
             overflow-x: hidden;
             position: relative;
         }
 
-        /* Glowing Orbs Background */
+        /* Ambient Glowing Orbs Background */
         .glowing-orbs {
             position: fixed;
             top: 0;
@@ -67,41 +87,41 @@
         .orb {
             position: absolute;
             border-radius: 50%;
-            filter: blur(120px);
-            opacity: 0.12;
+            filter: blur(140px);
+            opacity: 0.15;
             animation: orbFloat 25s infinite alternate ease-in-out;
         }
 
         .orb-1 {
             top: -10%;
             left: -10%;
-            width: 50vw;
-            height: 50vw;
+            width: 55vw;
+            height: 55vw;
             background: radial-gradient(circle, var(--primary) 0%, var(--accent) 100%);
         }
 
         .orb-2 {
-            bottom: -10%;
+            bottom: -15%;
             right: -10%;
             width: 60vw;
             height: 60vw;
             background: radial-gradient(circle, var(--secondary) 0%, var(--accent) 100%);
-            animation-delay: -5s;
+            animation-delay: -6s;
         }
 
         .orb-3 {
-            top: 40%;
-            left: 50%;
-            width: 35vw;
-            height: 35vw;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.5) 0%, transparent 100%);
-            animation-duration: 35s;
+            top: 45%;
+            left: 40%;
+            width: 40vw;
+            height: 40vw;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.4) 0%, transparent 80%);
+            animation-duration: 32s;
         }
 
         @keyframes orbFloat {
             0% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(5%, 10%) scale(1.1); }
-            100% { transform: translate(-5%, -5%) scale(0.9); }
+            50% { transform: translate(4%, 8%) scale(1.08); }
+            100% { transform: translate(-4%, -5%) scale(0.92); }
         }
 
         /* Ambient grid pattern overlay */
@@ -113,9 +133,9 @@
             width: 100%;
             height: 100%;
             background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
-            background-size: 40px 40px;
+                linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 45px 45px;
             pointer-events: none;
             z-index: 1;
         }
@@ -128,13 +148,149 @@
             background: var(--bg-darker);
         }
         ::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15);
             border-radius: 4px;
-            border: 2px solid var(--bg-darker);
         }
         ::-webkit-scrollbar-thumb:hover {
             background: var(--primary);
-            box-shadow: 0 0 10px var(--primary);
+            box-shadow: 0 0 12px var(--primary);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Section layout */
+        .section {
+            padding: 100px 0;
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .section.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            letter-spacing: -0.5px;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 60px auto;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            background: rgba(0, 240, 255, 0.08);
+            border: 1px solid var(--primary-border);
+            color: var(--primary);
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: clamp(2.1rem, 4.5vw, 3rem);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .section-title span {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ==================== BUTTONS ==================== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 13px 26px;
+            border-radius: var(--radius-full);
+            font-size: 0.92rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            font-family: var(--font-sans);
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: var(--bg-darker);
+            border: none;
+            box-shadow: 0 4px 20px rgba(0, 240, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 240, 255, 0.5);
+            background: linear-gradient(135deg, #00f0ff 0%, #a855f7 100%);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: #ffffff;
+            border: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+            color: #ffffff;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            color: #ffffff;
+            backdrop-filter: blur(8px);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: rgba(0, 240, 255, 0.05);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 240, 255, 0.15);
+        }
+
+        .btn-sm {
+            padding: 8px 16px;
+            font-size: 0.82rem;
+            border-radius: var(--radius-full);
         }
 
         /* ==================== NAVIGATION ==================== */
@@ -144,26 +300,26 @@
             left: 0;
             right: 0;
             height: 80px;
-            background: rgba(5, 5, 8, 0.7);
+            background: rgba(4, 4, 7, 0.75);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border);
             display: flex;
             align-items: center;
-            justify-content: center;
             z-index: 1000;
             transition: var(--transition);
         }
 
         nav.scrolled {
-            height: 65px;
-            background: rgba(2, 2, 3, 0.85);
-            border-bottom-color: rgba(0, 240, 255, 0.15);
+            height: 68px;
+            background: rgba(2, 2, 4, 0.9);
+            border-bottom-color: rgba(0, 240, 255, 0.18);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         .nav-container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1240px;
             padding: 0 24px;
             display: flex;
             justify-content: space-between;
@@ -179,10 +335,21 @@
             letter-spacing: -0.5px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
-        .logo span {
+        .logo-badge {
+            font-size: 0.72rem;
+            padding: 2px 8px;
+            border-radius: var(--radius-full);
+            background: rgba(0, 240, 255, 0.1);
+            color: var(--primary);
+            border: 1px solid var(--primary-border);
+            font-weight: 600;
+            font-family: var(--font-mono);
+        }
+
+        .logo span.gradient {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -191,52 +358,18 @@
 
         .nav-menu {
             display: flex;
-            gap: 30px;
+            gap: 28px;
             align-items: center;
-        }
-
-        /* Menu Toggle Button (Hamburger) */
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 26px;
-            height: 18px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            z-index: 1010;
-        }
-
-        .menu-toggle span {
-            width: 100%;
-            height: 2px;
-            background-color: #ffffff;
-            transition: var(--transition);
-            border-radius: 2px;
-        }
-
-        .menu-toggle.open span:nth-child(1) {
-            transform: translateY(8px) rotate(45deg);
-            background-color: var(--primary);
-        }
-        .menu-toggle.open span:nth-child(2) {
-            opacity: 0;
-        }
-        .menu-toggle.open span:nth-child(3) {
-            transform: translateY(-8px) rotate(-45deg);
-            background-color: var(--primary);
         }
 
         .nav-link {
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.92rem;
             font-weight: 500;
             transition: var(--transition);
             position: relative;
             padding: 6px 0;
-            font-family: var(--font-sans);
         }
 
         .nav-link:hover,
@@ -261,620 +394,442 @@
             width: 100%;
         }
 
-        /* ==================== GENERAL LAYOUT ==================== */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .section {
-            min-height: 100vh;
+        .nav-cta {
             display: flex;
             align-items: center;
-            padding: 100px 0;
-            position: relative;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
+            gap: 12px;
         }
 
-        .section.loaded {
-            opacity: 1;
-            transform: translateY(0);
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 26px;
+            height: 18px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 1010;
         }
 
-        h1 {
-            font-family: var(--font-display);
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: 800;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #ffffff 30%, var(--primary) 70%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.15;
-            letter-spacing: -1px;
-        }
-
-        h2 {
-            font-family: var(--font-display);
-            font-size: clamp(2rem, 5vw, 2.75rem);
-            font-weight: 700;
-            margin-bottom: 50px;
-            color: #ffffff;
-            position: relative;
-            display: inline-block;
-            letter-spacing: -0.5px;
-        }
-
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+        .menu-toggle span {
+            width: 100%;
+            height: 2px;
+            background-color: #ffffff;
+            transition: var(--transition);
             border-radius: 2px;
         }
 
-        h3 {
-            font-family: var(--font-display);
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 12px;
+        .menu-toggle.open span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+            background-color: var(--primary);
         }
-
-        p {
-            font-family: var(--font-sans);
-            font-size: 1rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-        }
-
-        /* Buttons styling */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 30px;
-            border-radius: 30px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            text-decoration: none;
-            font-family: var(--font-sans);
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            color: var(--bg-darker);
-            border: none;
-            box-shadow: 0 4px 20px rgba(0, 240, 255, 0.25);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(0, 240, 255, 0.45);
-            background: linear-gradient(135deg, #00f0ff 0%, #a855f7 100%);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border);
-            color: #ffffff;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            background: rgba(0, 240, 255, 0.04);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 240, 255, 0.15);
-        }
-
-        .profile-btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 16px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            text-decoration: none;
-            transition: var(--transition);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
-
-        .profile-btn.play-store:hover {
-            border-color: var(--primary);
-            background: rgba(0, 240, 255, 0.04);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 240, 255, 0.12);
-        }
-
-        .profile-btn.app-store:hover {
-            border-color: var(--secondary);
-            background: rgba(168, 85, 247, 0.04);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(168, 85, 247, 0.12);
-        }
-
-        .profile-btn-label {
-            font-size: 0.65rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-weight: 600;
-            line-height: 1.2;
-        }
-
-        .profile-btn-title {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: #ffffff;
-            font-family: var(--font-display);
-            line-height: 1.2;
-        }
-        
-        .profile-btn.play-store:hover .profile-btn-title {
-            color: var(--primary);
-        }
-
-        .profile-btn.app-store:hover .profile-btn-title {
-            color: var(--secondary);
-        }
-
-        .hero-profiles-grid {
-            margin-bottom: 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 12px;
-            max-width: 360px;
-            width: 100%;
+        .menu-toggle.open span:nth-child(2) { opacity: 0; }
+        .menu-toggle.open span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+            background-color: var(--primary);
         }
 
         /* ==================== HERO SECTION ==================== */
         .hero {
-            padding-top: 140px;
-            min-height: 100vh;
+            padding-top: 150px;
+            padding-bottom: 80px;
+            min-height: 95vh;
+            display: flex;
+            align-items: center;
         }
 
         .hero-layout {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
             gap: 60px;
+            align-items: center;
             width: 100%;
-        }
-
-        .hero-content {
-            max-width: 760px;
-            flex: 1;
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 6px 14px;
+            gap: 10px;
+            padding: 7px 16px;
             background: rgba(0, 240, 255, 0.08);
-            border: 1px solid rgba(0, 240, 255, 0.15);
+            border: 1px solid var(--primary-border);
             color: var(--primary);
-            border-radius: 30px;
-            font-size: 0.85rem;
-            font-weight: 600;
+            border-radius: var(--radius-full);
+            font-size: 0.84rem;
+            font-weight: 700;
             margin-bottom: 24px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-badge .pulse-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--success);
+            box-shadow: 0 0 10px var(--success);
+            animation: pulseDot 2s infinite;
+        }
+
+        @keyframes pulseDot {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        .hero-title {
+            font-size: clamp(2.4rem, 4.8vw, 4rem);
+            font-weight: 900;
+            line-height: 1.12;
+            margin-bottom: 22px;
+            letter-spacing: -1.5px;
+        }
+
+        .hero-title .gradient-text {
+            background: linear-gradient(135deg, #ffffff 15%, var(--primary) 65%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero-subtitle {
-            font-size: clamp(1.2rem, 3vw, 1.6rem);
-            font-weight: 500;
-            color: #ffffff;
-            margin-bottom: 20px;
-            font-family: var(--font-sans);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #cbd5e1;
+            margin-bottom: 18px;
         }
 
         .hero-subtitle span {
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
-            background-clip: text;
+            color: var(--primary);
         }
 
         .hero-bio {
-            font-size: 1.1rem;
+            font-size: 1.08rem;
             color: var(--text-secondary);
             margin-bottom: 35px;
-            max-width: 680px;
             line-height: 1.8;
+            max-width: 640px;
         }
 
-        .typing-container {
-            font-family: var(--font-mono);
-            font-size: 0.95rem;
-            color: var(--secondary);
-            margin-bottom: 40px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .typing-container span.prompt {
-            color: var(--primary);
-        }
-
-        .typing {
-            border-right: 2px solid var(--secondary);
-            animation: blink 0.75s infinite;
-            padding-right: 4px;
-            font-weight: 600;
-        }
-
-        @keyframes blink {
-            50% { border-right-color: transparent; }
-        }
-
-        .hero-buttons {
-            display: flex;
+        /* Hero Social Proof Metrics Bar */
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        /* ==================== ABOUT & BADGES ==================== */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-        }
-
-        .about-badges {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .badge-card {
+            margin-bottom: 35px;
+            padding: 20px;
             background: var(--bg-surface);
             border: 1px solid var(--border);
-            padding: 30px 24px;
-            border-radius: 16px;
-            text-align: center;
+            border-radius: var(--radius-md);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            transition: var(--transition);
         }
 
-        .badge-card:hover {
-            border-color: var(--border-hover);
-            background: var(--bg-card);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 240, 255, 0.05);
+        .metric-item {
+            text-align: center;
+            border-right: 1px solid var(--border);
         }
 
-        .badge-card h4 {
+        .metric-item:last-child {
+            border-right: none;
+        }
+
+        .metric-val {
             font-family: var(--font-display);
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 800;
             color: #ffffff;
-            margin-bottom: 6px;
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
+            line-height: 1.1;
+            margin-bottom: 4px;
         }
 
-        .badge-card p {
+        .metric-label {
+            font-size: 0.75rem;
             color: var(--text-secondary);
-            font-size: 0.9rem;
-            font-weight: 500;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        /* ==================== SKILLS SECTION ==================== */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            margin-top: 20px;
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
         }
 
-        .skill-card {
-            background: var(--bg-surface);
+        /* Developer Profiles Pill Links */
+        .hero-profiles {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .hero-profiles-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .store-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: var(--radius-full);
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 30px;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.84rem;
+            font-weight: 600;
             transition: var(--transition);
+        }
+
+        .store-pill:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .store-pill svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        /* ==================== HERO SHOWCASE MOCKUP ==================== */
+        .hero-showcase {
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mockup-frame {
+            position: relative;
+            width: 310px;
+            height: 610px;
+            background: #0d0f1a;
+            border-radius: 46px;
+            border: 8px solid #1e2238;
+            box-shadow: 
+                0 25px 60px rgba(0, 0, 0, 0.8),
+                0 0 40px rgba(0, 240, 255, 0.15),
+                inset 0 0 10px rgba(255, 255, 255, 0.1);
             overflow: hidden;
+            z-index: 2;
         }
 
-        .skill-card::before {
-            content: '';
+        .mockup-notch {
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 110px;
+            height: 24px;
+            background: #000000;
+            border-radius: 12px;
+            z-index: 10;
+        }
+
+        .mockup-screen {
             width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--primary), transparent);
-            transform: scaleX(0);
-            transition: var(--transition);
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+            transition: opacity 0.6s ease;
         }
 
-        .skill-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .skill-card:hover {
-            border-color: var(--border-hover);
-            background: var(--bg-card);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0, 240, 255, 0.05);
-        }
-
-        .skill-header {
+        /* Floating Hero Cards */
+        .floating-badge {
+            position: absolute;
+            background: rgba(14, 17, 34, 0.85);
+            border: 1px solid var(--border-hover);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-radius: var(--radius-md);
+            padding: 12px 18px;
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-bottom: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            z-index: 3;
+            animation: floatBadge 6s infinite ease-in-out;
         }
 
-        .skill-icon {
-            font-size: 1.6rem;
+        .floating-badge.badge-top-left {
+            top: 15%;
+            left: -35px;
+            animation-delay: 0s;
         }
 
-        .skill-title {
-            font-family: var(--font-display);
-            font-size: 1.15rem;
+        .floating-badge.badge-bottom-right {
+            bottom: 12%;
+            right: -30px;
+            animation-delay: -3s;
+        }
+
+        @keyframes floatBadge {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .badge-icon-box {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: rgba(0, 240, 255, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .badge-text-title {
+            font-size: 0.88rem;
             font-weight: 700;
             color: #ffffff;
+            font-family: var(--font-display);
         }
 
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill-item {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border);
+        .badge-text-sub {
+            font-size: 0.72rem;
             color: var(--text-secondary);
-            padding: 6px 14px;
-            border-radius: 30px;
-            font-size: 0.8rem;
             font-weight: 500;
-            transition: var(--transition);
         }
 
-        .skill-card:hover .skill-item {
-            border-color: rgba(255, 255, 255, 0.08);
-        }
-
-        .skill-item:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            background: rgba(0, 240, 255, 0.05);
-            transform: scale(1.05);
-        }
-
-        /* ==================== EXPERIENCE (TIMELINE) ==================== */
-        .timeline {
+        /* ==================== TECH MARQUEE ==================== */
+        .marquee-section {
+            padding: 30px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            background: rgba(8, 10, 20, 0.6);
+            overflow: hidden;
             position: relative;
-            max-width: 900px;
-            margin: 40px auto 0 auto;
-            padding: 20px 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 35px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, var(--primary) 0%, var(--secondary) 50%, rgba(168, 85, 247, 0.1) 100%);
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 75px;
-            margin-bottom: 50px;
-        }
-
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            left: 24px;
-            top: 2px;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--bg-dark);
-            border: 3px solid var(--primary);
-            box-shadow: 0 0 12px var(--primary);
             z-index: 2;
-            transition: var(--transition);
         }
 
-        .timeline-item:nth-child(2) .timeline-dot {
-            border-color: var(--secondary);
-            box-shadow: 0 0 12px var(--secondary);
+        .marquee-track {
+            display: flex;
+            gap: 20px;
+            width: max-content;
+            animation: marqueeScroll 28s linear infinite;
         }
 
-        .timeline-item:hover .timeline-dot {
-            transform: scale(1.2);
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes marqueeScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .marquee-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 20px;
+            background: rgba(255, 255, 255, 0.025);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-full);
+            color: var(--text-secondary);
+            font-size: 0.86rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .marquee-pill .pill-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
             background: var(--primary);
         }
 
-        .timeline-item:nth-child(2):hover .timeline-dot {
-            background: var(--secondary);
+        /* ==================== PROJECTS / STOREFRONT ==================== */
+        .projects-section {
+            padding: 110px 0;
         }
 
-        .timeline-content {
-            background: var(--bg-surface);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 30px;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            transition: var(--transition);
-        }
-
-        .timeline-item:hover .timeline-content {
-            border-color: var(--border-hover);
-            background: var(--bg-card);
-            box-shadow: 0 12px 30px rgba(0, 240, 255, 0.03);
-        }
-
-        .timeline-header {
+        /* Business Filter Tabs */
+        .filter-tabs {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
+            justify-content: center;
             gap: 10px;
-            margin-bottom: 16px;
-        }
-
-        .timeline-title {
-            font-family: var(--font-display);
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #ffffff;
-        }
-
-        .timeline-title span {
-            font-size: 1.05rem;
-            font-weight: 500;
-            color: var(--primary);
-            margin-left: 8px;
-        }
-
-        .timeline-item:nth-child(2) .timeline-title span {
-            color: var(--secondary);
-        }
-
-        .timeline-date {
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            background: rgba(255, 255, 255, 0.02);
-            padding: 4px 12px;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-        }
-
-        .timeline-bullets {
-            list-style: none;
-        }
-
-        .timeline-bullets li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 12px;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        .timeline-bullets li::before {
-            content: "✦";
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: var(--primary);
-            font-size: 0.85rem;
-        }
-
-        .timeline-item:nth-child(2) .timeline-bullets li::before {
-            color: var(--secondary);
-        }
-
-        .timeline-bullets li:last-child {
-            margin-bottom: 0;
-        }
-
-        /* ==================== PROJECTS ==================== */
-        .projects-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 40px;
             flex-wrap: wrap;
-            gap: 20px;
+            margin-bottom: 50px;
         }
 
-        /* Project filter controls */
-        .filter-container {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            background: rgba(255, 255, 255, 0.02);
+        .tab-btn {
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--border);
             color: var(--text-secondary);
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 0.85rem;
+            padding: 10px 22px;
+            border-radius: var(--radius-full);
+            font-size: 0.88rem;
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
             font-family: var(--font-sans);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .filter-btn:hover {
-            border-color: rgba(255, 255, 255, 0.15);
+        .tab-btn:hover {
             color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.06);
         }
 
-        .filter-btn.active {
+        .tab-btn.active {
             background: var(--primary-glow);
             border-color: var(--primary);
             color: var(--primary);
-            box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
         }
 
+        .tab-count {
+            background: rgba(255, 255, 255, 0.1);
+            font-size: 0.72rem;
+            padding: 2px 7px;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+        }
+
+        .tab-btn.active .tab-count {
+            background: var(--primary);
+            color: var(--bg-darker);
+        }
+
+        /* Storefront Grid */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 30px;
         }
 
+        /* Store-Grade Project Card */
         .project-card {
             background: var(--bg-surface);
             border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 30px;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            transition: var(--transition);
+            border-radius: var(--radius-lg);
+            padding: 30px 26px;
             display: flex;
             flex-direction: column;
-            height: 100%;
+            transition: var(--transition);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
             position: relative;
             overflow: hidden;
         }
@@ -882,1097 +837,1833 @@
         .project-card::before {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(0, 240, 255, 0.03) 0%, transparent 60%);
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
             opacity: 0;
             transition: var(--transition);
-            pointer-events: none;
         }
 
         .project-card:hover {
             border-color: var(--border-hover);
             background: var(--bg-card);
             transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 240, 255, 0.05);
+            box-shadow: 0 20px 45px rgba(0, 240, 255, 0.09);
         }
 
         .project-card:hover::before {
             opacity: 1;
         }
 
-        .project-name {
-            color: #ffffff;
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            font-family: var(--font-display);
-        }
-
-        .project-description {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
+        /* Card Top Header with Prominent App Icon */
+        .card-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
             margin-bottom: 22px;
-            flex-grow: 1;
-            line-height: 1.7;
         }
 
-        .project-tech {
+        .app-icon-wrapper {
+            position: relative;
+            width: 74px;
+            height: 74px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.16);
+            background: #090c1a;
+            padding: 2px;
+            box-shadow: 
+                0 10px 25px rgba(0, 0, 0, 0.5),
+                0 0 25px rgba(0, 240, 255, 0.12);
+            flex-shrink: 0;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .project-card:hover .app-icon-wrapper {
+            transform: scale(1.06) rotate(1deg);
+            border-color: var(--primary);
+            box-shadow: 
+                0 12px 30px rgba(0, 0, 0, 0.6),
+                0 0 30px rgba(0, 240, 255, 0.3);
+        }
+
+        .app-icon-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+            display: block;
+        }
+
+        .app-icon-wrapper.app-icon-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(0, 240, 255, 0.08));
+            border: 2px solid rgba(245, 158, 11, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(245, 158, 11, 0.12);
+            cursor: default;
+        }
+
+        .app-icon-wrapper.app-icon-placeholder .placeholder-svg {
+            width: 36px;
+            height: 36px;
+            color: #fbbf24;
+            filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.4));
+        }
+
+        .project-card:hover .app-icon-wrapper.app-icon-placeholder {
+            border-color: #fbbf24;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 30px rgba(245, 158, 11, 0.35);
+        }
+
+        .card-meta {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+        }
+
+        .card-category-tag {
+            padding: 5px 12px;
+            background: rgba(0, 240, 255, 0.1);
+            border: 1px solid var(--primary-border);
+            color: var(--primary);
+            border-radius: var(--radius-full);
+            font-size: 0.74rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-status-badge {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #10b981;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            padding: 3px 10px;
+            border-radius: var(--radius-full);
+            font-family: var(--font-mono);
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .card-status-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #10b981;
+            box-shadow: 0 0 6px #10b981;
+        }
+
+        .card-status-badge.status-verified {
+            color: #fbbf24;
+            background: rgba(245, 158, 11, 0.1);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        .card-status-badge.status-verified::before {
+            background: #fbbf24;
+            box-shadow: 0 0 6px #fbbf24;
+        }
+
+        /* Card Body */
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .card-headline {
+            font-size: 0.94rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.65;
+            flex-grow: 1;
+        }
+
+        /* Tech Tags */
+        .card-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 24px;
+            gap: 6px;
+            margin-bottom: 22px;
         }
 
-        .tech-tag {
-            background: rgba(255, 255, 255, 0.03);
-            color: var(--text-secondary);
-            padding: 4px 10px;
-            border-radius: 4px;
+        .tag-badge {
             font-family: var(--font-mono);
-            font-size: 0.75rem;
+            font-size: 0.74rem;
+            padding: 4px 9px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border);
+            color: #94a3b8;
             font-weight: 500;
-            border: 1px solid var(--border);
         }
 
-        .project-links {
+        /* Card Action Links */
+        .card-actions {
             display: flex;
-            gap: 12px;
+            gap: 10px;
             margin-top: auto;
+            border-top: 1px solid var(--border);
+            padding-top: 18px;
+            flex-wrap: wrap;
         }
 
-        .project-link {
+        .store-btn {
             flex: 1;
-            padding: 10px 16px;
-            background: rgba(255, 255, 255, 0.02);
-            color: #ffffff;
+            min-width: 120px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 9px 14px;
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--border);
-            border-radius: 30px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 0.85rem;
+            border-radius: var(--radius-full);
+            color: #ffffff;
+            font-size: 0.8rem;
             font-weight: 600;
+            text-decoration: none;
             transition: var(--transition);
         }
 
-        .project-link:hover {
+        .store-btn svg {
+            width: 15px;
+            height: 15px;
+            fill: currentColor;
+        }
+
+        .store-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: rgba(0, 240, 255, 0.06);
+            transform: translateY(-2px);
+        }
+
+        .store-btn.store-apple:hover {
+            border-color: #a855f7;
+            color: #c084fc;
+            background: rgba(168, 85, 247, 0.08);
+        }
+
+        .store-btn.store-web:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: rgba(0, 240, 255, 0.08);
+        }
+
+        .store-btn.store-preview {
+            background: rgba(0, 240, 255, 0.08);
+            border-color: var(--primary-border);
+            color: var(--primary);
+        }
+
+        .store-btn.store-preview:hover {
             background: var(--primary);
             color: var(--bg-darker);
-            border-color: var(--primary);
             box-shadow: 0 4px 15px var(--primary-glow);
         }
 
-        /* ==================== SERVICES ==================== */
+        .store-btn.store-cert {
+            background: rgba(245, 158, 11, 0.09);
+            border-color: rgba(245, 158, 11, 0.35);
+            color: #fbbf24;
+        }
+
+        .store-btn.store-cert:hover {
+            background: #f59e0b;
+            border-color: #f59e0b;
+            color: #060813;
+            box-shadow: 0 4px 18px rgba(245, 158, 11, 0.35);
+            transform: translateY(-2px);
+        }
+
+        /* ==================== SERVICES SECTION ==================== */
+        .services-section {
+            padding: 110px 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(8, 11, 24, 0.4) 50%, transparent 100%);
+        }
+
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 28px;
         }
 
         .service-card {
             background: var(--bg-surface);
             border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 40px 30px;
-            text-align: center;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            border-radius: var(--radius-lg);
+            padding: 38px 32px;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            opacity: 0;
             transition: var(--transition);
         }
 
         .service-card:hover {
             border-color: var(--border-hover);
             background: var(--bg-card);
-            transform: translateY(-6px);
-            box-shadow: 0 12px 30px rgba(0, 240, 255, 0.04);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 240, 255, 0.06);
         }
 
-        .service-icon {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            display: inline-block;
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-icon-box {
+            width: 58px;
+            height: 58px;
+            border-radius: 16px;
+            background: rgba(0, 240, 255, 0.08);
+            border: 1px solid var(--primary-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+        }
+
+        .service-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .service-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-top: auto;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+
+        .service-features li {
+            font-size: 0.86rem;
+            color: #cbd5e1;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-features li:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 0.9rem;
+        }
+
+        /* ==================== HOW WE WORK (PROCESS) ==================== */
+        .process-section {
+            padding: 100px 0;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            position: relative;
+        }
+
+        .process-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px 26px;
+            backdrop-filter: blur(12px);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .process-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-6px);
+            background: var(--bg-card);
+        }
+
+        .process-step-num {
+            font-family: var(--font-mono);
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: rgba(255, 255, 255, 0.15);
+            margin-bottom: 18px;
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .service-name {
-            color: #ffffff;
+        .process-title {
             font-size: 1.15rem;
             font-weight: 700;
+            color: #ffffff;
             margin-bottom: 12px;
-            font-family: var(--font-display);
         }
 
-        .service-description {
+        .process-desc {
+            font-size: 0.88rem;
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            line-height: 1.65;
+        }
+
+        /* ==================== CREDIBILITY & CERTS ==================== */
+        .credibility-section {
+            padding: 90px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .credibility-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+        }
+
+        .cred-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            display: flex;
+            align-items: flex-start;
+            gap: 22px;
+            backdrop-filter: blur(12px);
+            transition: var(--transition);
+        }
+
+        .cred-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+        }
+
+        .cred-icon {
+            font-size: 2.4rem;
+            flex-shrink: 0;
+        }
+
+        .cred-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .cred-issuer {
+            font-size: 0.88rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .cred-desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        /* ==================== HIGH-CONVERTING CTA & CONTACT ==================== */
+        .cta-section {
+            padding: 120px 0;
+            text-align: center;
+        }
+
+        .cta-box {
+            background: radial-gradient(circle at top center, rgba(0, 240, 255, 0.12) 0%, rgba(14, 17, 34, 0.8) 70%);
+            border: 1px solid var(--primary-border);
+            border-radius: 28px;
+            padding: 70px 40px;
+            backdrop-filter: blur(18px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-title {
+            font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 18px;
+            line-height: 1.2;
+        }
+
+        .cta-desc {
+            font-size: 1.12rem;
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin: 0 auto 40px auto;
             line-height: 1.7;
         }
 
-        /* ==================== CERTIFICATIONS ==================== */
-        .certifications-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            margin-top: 20px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cert-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 30px;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            transition: var(--transition);
+        .cta-actions {
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-        }
-
-        .cert-card:hover {
-            border-color: var(--border-hover);
-            background: var(--bg-card);
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(0, 240, 255, 0.03);
-        }
-
-        .cert-badge {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        .cert-name {
-            font-family: var(--font-display);
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 8px;
-        }
-
-        .cert-issuer {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-        }
-
-        .cert-link {
-            align-self: flex-start;
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--primary);
-            border: 1px solid rgba(0, 240, 255, 0.2);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .cert-link:hover {
-            background: var(--primary);
-            color: var(--bg-darker);
-            border-color: var(--primary);
-            box-shadow: 0 4px 15px var(--primary-glow);
-        }
-
-        /* ==================== CONTACT ==================== */
-        .contact {
-            min-height: 80vh;
-        }
-
-        .contact-container {
-            max-width: 680px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-text {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
             margin-bottom: 45px;
         }
 
-        .contact-links {
+        .contact-methods {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             flex-wrap: wrap;
+            border-top: 1px solid var(--border);
+            padding-top: 35px;
         }
 
-        .contact-link {
+        .contact-pill {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
-            padding: 16px 32px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border);
-            border-radius: 30px;
-            color: #ffffff;
+            gap: 10px;
+            color: var(--text-secondary);
             text-decoration: none;
+            font-size: 0.92rem;
             font-weight: 600;
-            font-family: var(--font-sans);
             transition: var(--transition);
         }
 
-        .contact-link span.icon {
-            font-size: 1.25rem;
-            transition: var(--transition);
-        }
-
-        .contact-link:hover {
-            border-color: var(--primary);
+        .contact-pill:hover {
             color: var(--primary);
-            background: rgba(0, 240, 255, 0.04);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 240, 255, 0.1);
+            transform: translateY(-2px);
         }
 
-        .contact-link:hover span.icon {
-            transform: scale(1.15);
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background: #25D366;
+            color: #ffffff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            text-decoration: none;
+            transition: var(--transition);
         }
 
-        /* ==================== FOOTER ==================== */
-        footer {
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        .floating-whatsapp svg {
+            width: 32px;
+            height: 32px;
+            fill: #ffffff;
+        }
+
+        /* ==================== SCREENSHOT LIGHTBOX MODAL ==================== */
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-backdrop.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
             background: var(--bg-darker);
-            border-top: 1px solid var(--border);
-            padding: 40px 20px;
-            text-align: center;
+            border: 1px solid var(--border-hover);
+            border-radius: var(--radius-lg);
+            max-width: 960px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 30px;
             position: relative;
-            z-index: 2;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
-        footer p {
+        .modal-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border);
+            color: #ffffff;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            z-index: 10;
+        }
+
+        .modal-close-btn:hover {
+            background: var(--primary);
+            color: var(--bg-darker);
+        }
+
+        .modal-header {
+            padding-right: 50px;
+        }
+
+        .modal-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .modal-desc {
+            font-size: 0.94rem;
+            color: var(--text-secondary);
+        }
+
+        .modal-viewer {
+            width: 100%;
+            height: 480px;
+            background: #090b16;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+        }
+
+        .modal-main-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .modal-thumbnails {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+        }
+
+        .modal-thumb {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 2px solid var(--border);
+            opacity: 0.6;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .modal-thumb:hover,
+        .modal-thumb.active {
+            opacity: 1;
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+            padding-top: 18px;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
         }
 
-        /* ==================== RESPONSIVE ==================== */
-        @media (max-width: 992px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
+        /* ==================== RESPONSIVE BREAKPOINTS ==================== */
+        @media (max-width: 1024px) {
             .hero-layout {
-                gap: 40px;
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 50px;
             }
-        }
-
-        @media (max-width: 900px) {
-            .menu-toggle {
-                display: flex;
+            .hero-content {
+                margin: 0 auto;
             }
-
-            .nav-menu {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 280px;
-                height: 100vh;
-                background: rgba(5, 5, 8, 0.96);
-                backdrop-filter: blur(20px);
-                -webkit-backdrop-filter: blur(20px);
-                border-left: 1px solid var(--border);
-                flex-direction: column;
+            .hero-metrics {
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-actions {
                 justify-content: center;
-                gap: 30px;
-                padding: 40px;
-                transition: var(--transition);
-                z-index: 1005;
-                align-items: flex-start;
             }
-
-            .nav-menu.active {
-                right: 0;
-                box-shadow: -10px 0 30px rgba(0, 240, 255, 0.15);
+            .hero-profiles {
+                justify-content: center;
             }
-
-            .nav-link {
-                font-size: 1.1rem;
-                width: 100%;
-                padding: 10px 0;
+            .hero-showcase {
+                margin-top: 20px;
             }
-
-            .nav-link::after {
-                display: none;
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .credibility-grid {
+                grid-template-columns: 1fr;
             }
         }
 
         @media (max-width: 768px) {
-            .section {
-                padding: 80px 0;
-            }
-
-            nav {
-                height: 70px;
-            }
-
-            .hero-layout {
-                flex-direction: column-reverse;
-                text-align: center;
-            }
-
-            .hero-content {
-                max-width: 100%;
-            }
-
-            .hero-badge {
-                margin-bottom: 16px;
-            }
-
-            .typing-container {
-                justify-content: center;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-            }
-
-            .hero-profiles-grid {
-                margin: 0 auto 40px auto;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 8px;
-                max-width: 320px;
-            }
-
-            .profile-btn {
-                justify-content: center;
-                padding: 8px 12px;
-                gap: 6px;
-                border-radius: 10px;
-            }
-
-            .profile-btn span {
-                font-size: 1.3rem !important;
-            }
-
-            .timeline::before {
-                left: 20px;
-            }
-
-            .timeline-item {
-                padding-left: 50px;
-            }
-
-            .timeline-dot {
-                left: 9px;
-            }
-
-            .projects-header {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: rgba(3, 4, 8, 0.98);
+                backdrop-filter: blur(20px);
                 flex-direction: column;
-                align-items: flex-start;
+                padding: 30px;
+                border-bottom: 1px solid var(--border);
+                transform: translateY(-150%);
+                transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
                 gap: 20px;
             }
-
-            .filter-container {
-                width: 100%;
+            .nav-menu.active {
+                transform: translateY(0);
             }
-
-            .contact-links {
-                flex-direction: column;
-                gap: 16px;
+            .menu-toggle {
+                display: flex;
             }
-
-            .contact-link {
-                width: 100%;
-                justify-content: center;
+            .nav-cta .btn {
+                display: none;
             }
-        }
-
-        @media (max-width: 480px) {
-            .nav-container {
-                padding: 0 16px;
+            .hero-metrics {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
             }
-            .logo {
-                font-size: 1.15rem;
+            .metric-item:nth-child(2) {
+                border-right: none;
             }
-            .about-badges {
+            .projects-grid {
                 grid-template-columns: 1fr;
+            }
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+            .floating-badge {
+                display: none;
+            }
+            .mockup-frame {
+                width: 270px;
+                height: 540px;
+            }
+            .modal-viewer {
+                height: 320px;
             }
         }
     </style>
 </head>
 
 <body>
-    <!-- Background glowing orbs -->
+    <!-- Background Ambient Glow -->
     <div class="glowing-orbs">
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
         <div class="orb orb-3"></div>
     </div>
 
-    <!-- ========== [START NAVIGATION SECTION] ========== -->
+    <!-- Floating Direct WhatsApp Quick Action -->
+    <a href="https://wa.me/201507569512?text=Hi%20Mohamed,%20I'm%20interested%20in%20discussing%20a%20new%20mobile/SaaS%20project" 
+       target="_blank" 
+       class="floating-whatsapp" 
+       aria-label="Direct WhatsApp Contact" 
+       title="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.535 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.981-1.309A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.182c-1.637 0-3.167-.478-4.46-1.3l-.32-.202-2.964.778.792-2.89-.209-.333C3.968 15.006 3.455 13.543 3.455 12c0-4.712 3.833-8.545 8.545-8.545 4.713 0 8.545 3.833 8.545 8.545 0 4.713-3.832 8.545-8.545 8.545z"/>
+        </svg>
+    </a>
+
+    <!-- ==================== NAVIGATION ==================== -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#hero" class="logo">Mohamed <span>Hisham</span></a>
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <a href="#hero" class="logo">
+                <span class="gradient">Mohamed Hisham</span>
+                <span class="logo-badge">Mobile & SaaS</span>
+            </a>
+
             <div class="nav-menu" id="navMenu">
-                <a href="#hero" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Live Storefront</a>
+                <a href="#services" class="nav-link">Solutions</a>
+                <a href="#process" class="nav-link">Process</a>
                 <a href="#experience" class="nav-link">Experience</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#certifications" class="nav-link">Certificates</a>
                 <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-cta">
+                <a href="https://wa.me/201507569512" target="_blank" class="btn btn-whatsapp btn-sm">
+                    <span>Chat on WhatsApp</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
-    <!-- ========== [END NAVIGATION SECTION] ========== -->
 
-    <!-- ========== [START HERO SECTION] ========== -->
-    <section id="hero" class="section hero">
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="section hero loaded">
         <div class="container">
             <div class="hero-layout">
                 <div class="hero-content">
-                    <div class="hero-badge">⚡ Available for new opportunities</div>
-                    <h1 class="hero-title">Mohamed Hisham</h1>
-                    <div class="hero-subtitle">Software Engineer | <span>Flutter & AI-Assisted Developer</span></div>
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        <span>Shipped 16+ Production Apps · Available for New Projects</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Turning Bold Ideas into <br>
+                        <span class="gradient-text">Market-Dominating Apps.</span>
+                    </h1>
+
+                    <div class="hero-subtitle">
+                        Senior Mobile & SaaS Architect | <span>Flutter & High-Velocity AI Engineering</span>
+                    </div>
+
                     <p class="hero-bio">
-                        Results-driven Software Engineer with a proven track record of delivering 10+ production-ready mobile and web applications across iOS and Android. Passionate about integrating AI-powered development workflows and Clean Architecture to accelerate product delivery while maintaining strict code standards.
+                        I partner with ambitious founders, companies, and product teams to architect, build, and publish high-performance mobile ecosystems (iOS & Android) and SaaS platforms. By integrating Clean Architecture with modern AI engineering workflows, I cut time-to-market by 50% without compromising code security or scalability.
                     </p>
-                    <div class="typing-container">
-                        <span class="prompt">~/hisham$</span> tech-stack --load <span class="typing" id="typingText">Flutter</span>
-                    </div>
-                    <div class="hero-profiles-grid">
-                        <a href="https://play.google.com/store/apps/developer?id=M1Hisham" target="_blank" class="profile-btn play-store">
-                            <div>
-                                <div class="profile-btn-label">Developer Profile</div>
-                                <div class="profile-btn-title">Google Play</div>
-                            </div>
-                        </a>
-                        <a href="https://apps.apple.com/us/developer/mohamed-hisham/id1820654983" target="_blank" class="profile-btn app-store">
-                            <div>
-                                <div class="profile-btn-label">Developer Profile</div>
-                                <div class="profile-btn-title">App Store</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View Featured Projects</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ========== [END HERO SECTION] ========== -->
 
-    <!-- ========== [START ABOUT SECTION] ========== -->
-    <section id="about" class="section about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>
-                        I'm a Cairo-based Software Engineer specialized in Flutter, cross-platform mobile development, and modern cloud infrastructures. My core expertise lies in architecting complex mobile ecosystems, designing clean, modular, and highly testable code bases using MVVM/Clean Architecture patterns.
-                    </p>
-                    <p>
-                        I focus extensively on high-velocity AI-assisted engineering. By integrating cutting-edge LLMs and developer agents (such as Claude, Antigravity, and Cursor) into my programming loop, I reduce architectural overhead and speed up feature iterations by over 50%.
-                    </p>
-                    <p>
-                        From real-time bidding platforms and secure e-commerce multi-app ecosystems to restaurant dashboards and compound management systems, I aim to ship production-ready, beautiful, and secure digital products.
-                    </p>
-                </div>
-                <div class="about-badges">
-                    <div class="badge-card">
-                        <h4>10+</h4>
-                        <p>Production Apps Shipped</p>
-                    </div>
-                    <div class="badge-card">
-                        <h4>50%+</h4>
-                        <p>AI-Driven Speed Gain</p>
-                    </div>
-                    <div class="badge-card">
-                        <h4>SaaS</h4>
-                        <p>Architect & Developer</p>
-                    </div>
-                    <div class="badge-card">
-                        <h4>Clean</h4>
-                        <p>Architecture Focus</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ========== [END ABOUT SECTION] ========== -->
-
-    <!-- ========== [START SKILLS SECTION] ========== -->
-    <section id="skills" class="section skills">
-        <div class="container">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <!-- AI Engineering -->
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-icon">🧠</span>
-                        <span class="skill-title">AI & LLM Engineering</span>
-                    </div>
-                    <div class="skill-list">
-                        <span class="skill-item">Claude</span>
-                        <span class="skill-item">CodeX</span>
-                        <span class="skill-item">Antigravity</span>
-                        <span class="skill-item">Cursor</span>
-                        <span class="skill-item">AI-Assisted Architecture</span>
-                        <span class="skill-item">Rapid Prototyping</span>
-                        <span class="skill-item">Prompt Engineering</span>
-                    </div>
-                </div>
-
-                <!-- Mobile & Languages -->
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-icon">📱</span>
-                        <span class="skill-title">Mobile & Languages</span>
-                    </div>
-                    <div class="skill-list">
-                        <span class="skill-item">Flutter</span>
-                        <span class="skill-item">Dart</span>
-                        <span class="skill-item">Kotlin</span>
-                        <span class="skill-item">C/C++</span>
-                        <span class="skill-item">JavaScript</span>
-                    </div>
-                </div>
-
-                <!-- Architecture & Patterns -->
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-icon">🏛️</span>
-                        <span class="skill-title">Architecture & Patterns</span>
-                    </div>
-                    <div class="skill-list">
-                        <span class="skill-item">Clean Architecture</span>
-                        <span class="skill-item">MVVM</span>
-                        <span class="skill-item">OOP</span>
-                        <span class="skill-item">System Design</span>
-                        <span class="skill-item">DSA</span>
-                    </div>
-                </div>
-
-                <!-- Backend & Cloud -->
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-icon">☁️</span>
-                        <span class="skill-title">Backend & Cloud</span>
-                    </div>
-                    <div class="skill-list">
-                        <span class="skill-item">Firebase</span>
-                        <span class="skill-item">Supabase</span>
-                        <span class="skill-item">Cloud Functions</span>
-                        <span class="skill-item">Laravel</span>
-                        <span class="skill-item">RESTful API</span>
-                    </div>
-                </div>
-
-                <!-- State Management & Tools -->
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-icon">🛠️</span>
-                        <span class="skill-title">State Management & Tools</span>
-                    </div>
-                    <div class="skill-list">
-                        <span class="skill-item">Bloc / Cubit</span>
-                        <span class="skill-item">Provider</span>
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">Postman</span>
-                        <span class="skill-item">Xcode</span>
-                        <span class="skill-item">Android Studio</span>
-                    </div>
-                </div>
-
-                <!-- Integrations & Platforms -->
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-icon">🔗</span>
-                        <span class="skill-title">Integrations & Platforms</span>
-                    </div>
-                    <div class="skill-list">
-                        <span class="skill-item">WebSocket</span>
-                        <span class="skill-item">FCM</span>
-                        <span class="skill-item">Tap Payment</span>
-                        <span class="skill-item">Cloudflare</span>
-                        <span class="skill-item">Play Console</span>
-                        <span class="skill-item">App Store Connect</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ========== [END SKILLS SECTION] ========== -->
-
-    <!-- ========== [START EXPERIENCE SECTION] ========== -->
-    <section id="experience" class="section experience">
-        <div class="container">
-            <h2>Professional Experience</h2>
-            <div class="timeline">
-                <!-- Freelance role -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div class="timeline-title">Freelance Software Engineer <span>— AI-Powered Delivery</span></div>
-                            <div class="timeline-date">2025 – Present</div>
+                    <!-- Authority Proof Metrics -->
+                    <div class="hero-metrics">
+                        <div class="metric-item">
+                            <div class="metric-val">16+</div>
+                            <div class="metric-label">Published Apps</div>
                         </div>
-                        <ul class="timeline-bullets">
-                            <li>Integrated AI tools (Claude, CodeX, Antigravity, Cursor) into every phase of development — from architecture planning and code generation to debugging and rapid iteration — cutting delivery time by over 50% on multi-feature systems.</li>
-                            <li>Used vibe coding workflows to prototype, validate, and ship complete product ideas in days rather than weeks, enabling faster client feedback loops and higher output per sprint.</li>
-                            <li>Delivered 6+ production systems across mobile and web: compound gate management, e-commerce ecosystems, CRM platforms, auction marketplaces, restaurant dashboards, and sports academy systems.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Mobile Developer role -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div class="timeline-title">Mobile Developer <span>— SafeSpace</span></div>
-                            <div class="timeline-date">2024 – Feb 2025</div>
+                        <div class="metric-item">
+                            <div class="metric-val">100%</div>
+                            <div class="metric-label">Store Approval</div>
                         </div>
-                        <ul class="timeline-bullets">
-                            <li>Contributed Flutter features within a structured cross-functional team; applied professional software engineering practices in a remote product environment with real deployment cycles.</li>
-                            <li>Collaborated with product designers and backend engineers in Germany to build features focusing on secure client-side location mapping, user identity protection, and local caching.</li>
-                        </ul>
+                        <div class="metric-item">
+                            <div class="metric-val">50%+</div>
+                            <div class="metric-label">AI Delivery Speed</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-val">5.0★</div>
+                            <div class="metric-label">Quality Rating</div>
+                        </div>
+                    </div>
+
+                    <!-- Primary Actions -->
+                    <div class="hero-actions">
+                        <a href="https://wa.me/201507569512?text=Hello%20Mohamed,%20I%20have%20a%20project%20I%20want%20to%20discuss" target="_blank" class="btn btn-whatsapp">
+                            <span>Discuss Your Project</span>
+                        </a>
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Explore Storefront</span>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1ABCtG_PzFAYim_nawBzMpG8fv2CaWlU1/view" target="_blank" class="btn btn-secondary">
+                            <span>View Credentials</span>
+                        </a>
+                    </div>
+
+                    <!-- Developer Profiles -->
+                    <div class="hero-profiles">
+                        <span class="hero-profiles-label">Official Store Profiles:</span>
+                        <a href="https://apps.apple.com/us/developer/mohamed-hisham/id1820654983" target="_blank" class="store-pill">
+                            <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.86c.66-.82 1.11-1.96.99-3.1-.96.04-2.12.65-2.8 1.45-.6.69-1.12 1.84-.98 2.95 1.07.08 2.13-.57 2.79-1.3z"/></svg>
+                            <span>Apple App Store</span>
+                        </a>
+                        <a href="https://play.google.com/store/apps/developer?id=M1Hisham" target="_blank" class="store-pill">
+                            <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.41 2.41 0 0 1-.61-.395V2.21c.19-.16.398-.293.609-.396zm11.24 11.24l2.12 2.12-10.45 6.035 8.33-8.155zm2.842-1.768l2.766 1.603a1.447 1.447 0 0 1 0 2.222l-2.766 1.603-2.112-2.112 2.112-3.316zm-2.842-1.546L6.52 1.585l10.45 6.035-2.12 2.12z"/></svg>
+                            <span>Google Play</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Interactive Hero Device Mockup -->
+                <div class="hero-showcase">
+                    <div class="mockup-frame">
+                        <div class="mockup-notch"></div>
+                        <img src="assets/projects/wamda/01-home.png" alt="Featured App Screen" class="mockup-screen" id="heroMockupScreen">
+                    </div>
+
+                    <!-- Floating Badges -->
+                    <div class="floating-badge badge-top-left">
+                        <div class="badge-icon-box">⚡</div>
+                        <div>
+                            <div class="badge-text-title">Sub-Second Sync</div>
+                            <div class="badge-text-sub">Real-Time WebSockets</div>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge badge-bottom-right">
+                        <div class="badge-icon-box">🛡️</div>
+                        <div>
+                            <div class="badge-text-title">Clean MVVM & DRM</div>
+                            <div class="badge-text-sub">Production-Grade Security</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ========== [END EXPERIENCE SECTION] ========== -->
 
-    <!-- ========== [START PROJECTS SECTION] ========== -->
-    <section id="projects" class="section projects">
-        <div class="container">
-            <div class="projects-header">
-                <h2>Featured Projects</h2>
-                <div class="filter-container">
-                    <button class="filter-btn active" data-filter="all">All Projects</button>
-                    <button class="filter-btn" data-filter="ai-assisted">AI-Assisted</button>
-                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
-                    <button class="filter-btn" data-filter="web">Web & Cloud</button>
-                </div>
-            </div>
-
-            <div class="projects-grid" id="projectsGrid">
-                <!-- Projects generated dynamically by JavaScript -->
-            </div>
+    <!-- ==================== TECH MARQUEE ==================== -->
+    <section class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-pill"><span class="pill-dot"></span> Flutter 3.x Cross-Platform</div>
+            <div class="marquee-pill"><span class="pill-dot"></span> Clean Architecture & Cubit</div>
+            <div class="marquee-pill"><span class="pill-dot"></span> Multi-Role Ecosystems (User/Driver/Admin)</div>
+            <div class="marquee-pill"><span class="pill-dot"></span> Sub-Second WebSockets</div>
+            <div class="marquee-pill"><span class="pill-dot"></span> Supabase & Firebase Blaze</div>
+            <div class="marquee-pill"><span class="pill-dot"></span> 100% App Store Acceptance</div>
+            <div class="marquee-pill"><span class="pill-dot"></span> AI-Accelerated Velocity (Cursor/Claude)</div>
+            <div class="marquee-pill"><span class="pill-dot"></span> Payment Gateways (Tap / Stripe)</div>
+            <div class="marquee-pill"><span class="pill-dot"></span> Screen Capture DRM Shield</div>
+            <div class="marquee-pill"><span class="pill-dot"></span> Multi-Tenant SaaS Architecture</div>
+            <!-- Repeat track for seamless loop -->
+            <div class="marquee-pill"><span class="pill-dot"></span> Flutter 3.x Cross-Platform</div>
+            <div class="marquee-pill"><span class="pill-dot"></span> Clean Architecture & Cubit</div>
+            <div class="marquee-pill"><span class="pill-dot"></span> Multi-Role Ecosystems (User/Driver/Admin)</div>
+            <div class="marquee-pill"><span class="pill-dot"></span> Sub-Second WebSockets</div>
+            <div class="marquee-pill"><span class="pill-dot"></span> Supabase & Firebase Blaze</div>
+            <div class="marquee-pill"><span class="pill-dot"></span> 100% App Store Acceptance</div>
+            <div class="marquee-pill"><span class="pill-dot"></span> AI-Accelerated Velocity (Cursor/Claude)</div>
+            <div class="marquee-pill"><span class="pill-dot"></span> Payment Gateways (Tap / Stripe)</div>
+            <div class="marquee-pill"><span class="pill-dot"></span> Screen Capture DRM Shield</div>
+            <div class="marquee-pill"><span class="pill-dot"></span> Multi-Tenant SaaS Architecture</div>
         </div>
     </section>
-    <!-- ========== [END PROJECTS SECTION] ========== -->
 
-    <!-- ========== [START CERTIFICATIONS SECTION] ========== -->
-    <section id="certifications" class="section certifications">
+    <!-- ==================== PROJECTS STOREFRONT ==================== -->
+    <section id="projects" class="section projects-section">
         <div class="container">
-            <h2>Certifications</h2>
-            <div class="cert-grid">
-                <!-- Cert 1 -->
-                <div class="cert-card">
-                    <div>
-                        <div class="cert-badge">🎓</div>
-                        <div class="cert-name">Android Application Development (Kotlin)</div>
-                        <div class="cert-issuer">Information Technology Institute (ITI) · 2024</div>
-                    </div>
-                    <a href="https://drive.google.com/file/d/1ABCtG_PzFAYim_nawBzMpG8fv2CaWlU1/view" class="cert-link" target="_blank">View Certificate</a>
-                </div>
-
-                <!-- Cert 2 -->
-                <div class="cert-card">
-                    <div>
-                        <div class="cert-badge">🛡️</div>
-                        <div class="cert-name">Professional Mobile Developer Experience Certificate</div>
-                        <div class="cert-issuer">SafeSpace GmbH · Feb 2025</div>
-                    </div>
-                    <a href="https://drive.google.com/file/d/1vrw_wzuhXpKAR7dpcVXUt-HQb-lnBQHe/view" class="cert-link" target="_blank">View Experience Letter</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ========== [END CERTIFICATIONS SECTION] ========== -->
-
-    <!-- ========== [START SERVICES SECTION] ========== -->
-    <section id="services" class="section services">
-        <div class="container">
-            <h2>Professional Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <div class="service-name">Flutter Mobile Apps</div>
-                    <p class="service-description">
-                        End-to-end mobile application development for iOS and Android with focus on performance, rich UI, and native-grade responsiveness.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🏗️</div>
-                    <div class="service-name">SaaS Development</div>
-                    <p class="service-description">
-                        Scalable backend architectures and cloud functions integrations designed for robust multi-tenant and secure applications.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">⚙️</div>
-                    <div class="service-name">Backend Integration</div>
-                    <p class="service-description">
-                        High-frequency RESTful APIs, low-latency WebSocket implementations, and database configuration using Firebase and Supabase.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🔒</div>
-                    <div class="service-name">Secure Development</div>
-                    <p class="service-description">
-                        Security-first approach incorporating screen capture protection, secure storage, end-to-end encryption, and sandboxing.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🚀</div>
-                    <div class="service-name">App Store Publishing</div>
-                    <p class="service-description">
-                        Complete deployment lifecycle management for Google Play Store and Apple App Store, including ASO setup.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🏛️</div>
-                    <div class="service-name">Clean Architecture</div>
-                    <p class="service-description">
-                        Clean code structuring following domain-driven design, MVVM patterns, and automated unit testing frameworks.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ========== [END SERVICES SECTION] ========== -->
-
-    <!-- ========== [START CONTACT SECTION] ========== -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <div class="contact-container">
-                <h2>Let's Connect</h2>
-                <p class="contact-text">
-                    I'm always interested in discussing new freelance projects, remote positions, or technical architectures. Feel free to reach out directly through any of the channels below.
+            <div class="section-header">
+                <div class="section-tag">Featured Storefront</div>
+                <h2 class="section-title">Production Apps & <span>SaaS Ecosystems</span></h2>
+                <p class="section-subtitle">
+                    Explore high-scale applications live on the Apple App Store and Google Play Store, battle-tested by thousands of daily users.
                 </p>
-                <div class="contact-links">
-                    <a href="mailto:m.hisham24@icloud.com" class="contact-link">
-                        <span class="icon">📧</span>
-                        <span>m.hisham24@icloud.com</span>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="filter-tabs" id="filterTabs">
+                <button class="tab-btn active" data-filter="all">All Solutions <span class="tab-count" id="countAll">0</span></button>
+                <button class="tab-btn" data-filter="ecosystems">Multi-App Ecosystems <span class="tab-count" id="countEco">0</span></button>
+                <button class="tab-btn" data-filter="realtime">Real-Time & Auctions <span class="tab-count" id="countReal">0</span></button>
+                <button class="tab-btn" data-filter="security">Security & Field IoT <span class="tab-count" id="countSec">0</span></button>
+                <button class="tab-btn" data-filter="saas">SaaS & Cloud Web <span class="tab-count" id="countSaas">0</span></button>
+            </div>
+
+            <!-- Dynamic Projects Grid -->
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Generated by JavaScript dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section id="services" class="section services-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Services & Packages</div>
+                <h2 class="section-title">High-Impact <span>Engineering Solutions</span></h2>
+                <p class="section-subtitle">
+                    Tailored development solutions designed for founders and companies who demand rapid delivery, clean code, and zero technical debt.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon-box">📱</div>
+                    <h3 class="service-title">Turnkey Mobile App Development</h3>
+                    <p class="service-desc">
+                        Full-lifecycle iOS and Android development from Figma designs to published, optimized Store listings with 100% Apple & Google review pass guarantee.
+                    </p>
+                    <ul class="service-features">
+                        <li>Native-Grade 60fps Flutter Performance</li>
+                        <li>Clean Architecture & Domain-Driven Structure</li>
+                        <li>Automated CI/CD Store Delivery Pipelines</li>
+                        <li>ASO (App Store Optimization) Setup</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon-box">⚡</div>
+                    <h3 class="service-title">Multi-Role On-Demand Ecosystems</h3>
+                    <p class="service-desc">
+                        Complete synchronized 3-to-4 app suites (User App, Driver/Captain App, Merchant Portal, and Admin Control Panel) with real-time dispatching.
+                    </p>
+                    <ul class="service-features">
+                        <li>Sub-Second Order Status Synchronization</li>
+                        <li>Background Geolocation & Route Optimization</li>
+                        <li>Instant Push Notifications & Sound Alerts</li>
+                        <li>Multi-Currency Payment Processing</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon-box">🔨</div>
+                    <h3 class="service-title">Live Bidding & Real-Time Engines</h3>
+                    <p class="service-desc">
+                        Low-latency WebSocket infrastructures capable of handling high-frequency bidding, real-time auctions, instant messaging, and financial transactions.
+                    </p>
+                    <ul class="service-features">
+                        <li>Sub-Second WebSocket Bid Conflict Resolution</li>
+                        <li>PCI-DSS Compliant Payment Gateways (Tap/Stripe)</li>
+                        <li>Live Auction Countdown Timers & Alerts</li>
+                        <li>Scalable Cloud Backends & Failover Logic</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon-box">🛡️</div>
+                    <h3 class="service-title">DRM & Enterprise Content Protection</h3>
+                    <p class="service-desc">
+                        Hardware-level mobile security for high-value video courses, educational exams, healthcare records, and confidential corporate contracts.
+                    </p>
+                    <ul class="service-features">
+                        <li>Screen Recording & Screenshot Blocking (iOS & Android)</li>
+                        <li>Dynamic Floating Watermarks with User Identity</li>
+                        <li>Encrypted Local Database Storage (AES-256)</li>
+                        <li>Biometric Auth (FaceID / Fingerprint)</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon-box">☁️</div>
+                    <h3 class="service-title">Multi-Tenant SaaS & Web Dashboards</h3>
+                    <p class="service-desc">
+                        Scalable SaaS platforms for club management, commercial compounds, and enterprises featuring role-based access and automated billing.
+                    </p>
+                    <ul class="service-features">
+                        <li>Supabase / PostgreSQL Cloud Schemas</li>
+                        <li>Automated QR Pass & Attendance Systems</li>
+                        <li>Subscription Billing & Invoicing Engine</li>
+                        <li>Comprehensive Operations & Analytics Reporting</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon-box">🧠</div>
+                    <h3 class="service-title">AI-Accelerated Velocity Consulting</h3>
+                    <p class="service-desc">
+                        Supercharging development workflows by leveraging AI developer agents (Claude, Cursor, Antigravity) to produce production-grade apps in record time.
+                    </p>
+                    <ul class="service-features">
+                        <li>50%+ Reduction in Feature Iteration Cycles</li>
+                        <li>Codebase Architecture Audits & Refactoring</li>
+                        <li>Automated Unit Testing & Mock Generation</li>
+                        <li>Zero-Debt Rapid Prototyping for MVPs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROCESS SECTION ==================== -->
+    <section id="process" class="section process-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Engagement Roadmap</div>
+                <h2 class="section-title">How We Build <span>Your Product</span></h2>
+                <p class="section-subtitle">
+                    A battle-tested, transparent 4-stage engineering sprint from initial idea to live store deployment.
+                </p>
+            </div>
+
+            <div class="process-grid">
+                <!-- Step 1 -->
+                <div class="process-card">
+                    <div class="process-step-num">01</div>
+                    <h3 class="process-title">Architecture Blueprint</h3>
+                    <p class="process-desc">
+                        We define your technical requirements, design domain models, plan third-party integrations (payments/maps), and conduct an App Store compliance audit.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-card">
+                    <div class="process-step-num">02</div>
+                    <h3 class="process-title">High-Velocity Build</h3>
+                    <p class="process-desc">
+                        Accelerated development using Clean Architecture and AI-assisted pair programming. You receive testable TestFlight / APK builds every sprint.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-card">
+                    <div class="process-step-num">03</div>
+                    <h3 class="process-title">Hardening & Store Prep</h3>
+                    <p class="process-desc">
+                        Rigorous QA testing across multiple screen ratios, offline handling, security validation, and generating high-converting store screenshot assets.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-card">
+                    <div class="process-step-num">04</div>
+                    <h3 class="process-title">Launch & Handover</h3>
+                    <p class="process-desc">
+                        Managing submission directly to Apple & Google Play, ensuring 100% approval, setting up CI/CD pipelines, and handing over organized documentation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE & CREDIBILITY ==================== -->
+    <section id="experience" class="section credibility-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Proven Track Record</div>
+                <h2 class="section-title">Verified <span>Experience & Credentials</span></h2>
+                <p class="section-subtitle">
+                    Demonstrated technical leadership across international startups and professional developer institutes.
+                </p>
+            </div>
+
+            <div class="credibility-grid">
+                <!-- Cred 1 -->
+                <div class="cred-card">
+                    <div class="cred-icon">🛡️</div>
+                    <div>
+                        <h3 class="cred-title">Professional Mobile Developer</h3>
+                        <div class="cred-issuer">SafeSpace GmbH · Munich, Germany (Feb 2025)</div>
+                        <p class="cred-desc">
+                            Spearheaded core mobile development for emergency alert systems, live location sharing, and encrypted responder dispatching under strict German data privacy standards.
+                        </p>
+                        <a href="https://drive.google.com/file/d/1vrw_wzuhXpKAR7dpcVXUt-HQb-lnBQHe/view?pli=1" target="_blank" class="btn btn-secondary btn-sm">View Experience Certificate</a>
+                    </div>
+                </div>
+
+                <!-- Cred 2 -->
+                <div class="cred-card">
+                    <div class="cred-icon">🎓</div>
+                    <div>
+                        <h3 class="cred-title">Android Application Development (Kotlin)</h3>
+                        <div class="cred-issuer">Information Technology Institute (ITI) · 2024</div>
+                        <p class="cred-desc">
+                            Intensive professional training in native Android SDK, Kotlin Coroutines, Jetpack components, clean architecture, and enterprise software engineering principles.
+                        </p>
+                        <a href="https://drive.google.com/file/d/1ABCtG_PzFAYim_nawBzMpG8fv2CaWlU1/view" target="_blank" class="btn btn-secondary btn-sm">View ITI Diploma</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== HIGH-CONVERTING CALL TO ACTION ==================== -->
+    <section id="contact" class="section cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <div class="section-tag">Let's Build Together</div>
+                <h2 class="cta-title">Ready to Turn Your Idea into a <br><span class="gradient-text">Market-Leading Product?</span></h2>
+                <p class="cta-desc">
+                    Whether you need a full multi-app delivery ecosystem, a real-time live bidding platform, or a high-security mobile application, I am available to take your vision from inception to the App Store in record time.
+                </p>
+
+                <div class="cta-actions">
+                    <a href="https://wa.me/201507569512?text=Hello%20Mohamed,%20I%20have%20a%20project%20I'd%20like%20to%20develop" target="_blank" class="btn btn-whatsapp">
+                        <span>Chat on WhatsApp (+20 1507569512)</span>
                     </a>
-                    <a href="https://wa.me/201507569512" target="_blank" class="contact-link">
-                        <span class="icon">💬</span>
-                        <span>+20 1507569512 (WhatsApp)</span>
+                    <a href="mailto:m.hisham24@icloud.com" class="btn btn-primary">
+                        <span>Send Direct Email</span>
                     </a>
-                    <a href="https://linkedin.com/in/m1-hisham" target="_blank" class="contact-link">
-                        <span class="icon">💼</span>
-                        <span>linkedin.com/in/m1-hisham</span>
+                </div>
+
+                <div class="contact-methods">
+                    <a href="mailto:m.hisham24@icloud.com" class="contact-pill">
+                        <span>✉️ m.hisham24@icloud.com</span>
                     </a>
-                    <a href="https://github.com/M1-Hisham" target="_blank" class="contact-link">
-                        <span class="icon">🐙</span>
-                        <span>github.com/M1-Hisham</span>
+                    <a href="https://linkedin.com/in/m1-hisham" target="_blank" class="contact-pill">
+                        <span>💼 LinkedIn Profile</span>
                     </a>
-                    <a href="https://play.google.com/store/apps/developer?id=M1Hisham" target="_blank" class="contact-link">
-                        <span>Google Play Profile</span>
+                    <a href="https://github.com/M1-Hisham" target="_blank" class="contact-pill">
+                        <span>🐙 GitHub Repositories</span>
                     </a>
-                    <a href="https://apps.apple.com/us/developer/mohamed-hisham/id1820654983" target="_blank" class="contact-link">
-                        <span>App Store Profile</span>
+                    <a href="https://apps.apple.com/us/developer/mohamed-hisham/id1820654983" target="_blank" class="contact-pill">
+                        <span>🍎 App Store Developer Page</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/developer?id=M1Hisham" target="_blank" class="contact-pill">
+                        <span>🤖 Google Play Developer Page</span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ========== [END CONTACT SECTION] ========== -->
 
-    <!-- ========== [START FOOTER SECTION] ========== -->
+    <!-- ==================== FOOTER ==================== -->
     <footer>
-        <p>&copy; 2026 Mohamed Hisham. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2026 Mohamed Hisham. Senior Mobile & SaaS Architect. All rights reserved.</p>
+        </div>
     </footer>
-    <!-- ========== [END FOOTER SECTION] ========== -->
 
-    <!-- ========== [START SCRIPT SECTION] ========== -->
+    <!-- ==================== SCREENSHOT GALLERY LIGHTBOX MODAL ==================== -->
+    <div class="modal-backdrop" id="screenshotModal">
+        <div class="modal-content">
+            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">Project Title</h3>
+                <p class="modal-desc" id="modalDesc">Project description</p>
+            </div>
+            <div class="modal-viewer">
+                <img src="" alt="Screenshot" class="modal-main-img" id="modalMainImg">
+            </div>
+            <div class="modal-thumbnails" id="modalThumbnails">
+                <!-- Generated by JS -->
+            </div>
+            <div class="modal-footer" id="modalFooter">
+                <div id="modalLinks"></div>
+                <button class="btn btn-secondary btn-sm" id="modalDoneBtn">Close Gallery</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== SCRIPTS & PROJECTS DATA ==================== -->
     <script>
-        // ==================== MOBILE HAMBURGER MENU ====================
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-        const navLinksList = document.querySelectorAll('.nav-link');
-
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('open');
-            navMenu.classList.toggle('active');
-        });
-
-        navLinksList.forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('open');
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // ==================== PROJECTS DATA ====================
-        const projects = [
+        /**
+         * =========================================================================
+         * PROJECTS DATA STORE
+         * -------------------------------------------------------------------------
+         * HOW TO ADD A NEW PROJECT IN THE FUTURE:
+         * Simply copy any project block below, change the properties, and add your 
+         * images inside `assets/projects/<your-app-folder>/`.
+         * Categories available: 'ecosystems', 'realtime', 'security', 'saas', 'mobile'
+         * =========================================================================
+         */
+        const projectsData = [
             {
-                name: "Mzaodin - مزاودين (Real-Time Auction)",
-                description: "AI-assisted architecture planning and boilerplate generation enabled rapid delivery of live bidding with sub-second WebSocket sync and PCI-compliant payment checkout.",
-                tech: "Flutter, MVVM, Cubit, WebSocket, Tap Payment, Laravel",
-                category: "ai-assisted, mobile",
+                id: "wamda",
+                name: "Wamda - ومضة (Multi-App Delivery Ecosystem)",
+                headline: "3-App On-Demand Food Ecosystem with Live Captain GPS Tracking",
+                category: "ecosystems, realtime, mobile",
+                icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4b/db/af/4bdbaf25-c3d1-db77-b7c7-b7fbf2db8f75/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/1200x630wa.png",
+                categoryBadge: "Multi-App Delivery Suite",
+                poster: "assets/projects/wamda/01-home.png",
+                description: "Synchronized multi-application on-demand ordering ecosystem encompassing the Wamda Customer App, Restaurant Merchant Portal, and Captain Delivery App with sub-second order status updates, real-time Google Maps driver tracking, and digital wallet dispatch.",
+                tech: ["Flutter", "Clean Architecture", "Cubit", "Firebase", "Google Maps SDK", "Push Notifications"],
+                screens: [
+                    "assets/projects/wamda/01-home.png",
+                    "assets/projects/wamda/02-restaurant.png",
+                    "assets/projects/wamda/03-categories.png",
+                    "assets/projects/wamda/04-profile.png",
+                    "assets/projects/wamda/05-customize-meal.png",
+                    "assets/projects/wamda/06-menu.png",
+                    "assets/projects/wamda/07-cart.png",
+                    "assets/projects/wamda/08-login.png",
+                    "assets/projects/wamda/09-splash.png"
+                ],
+                links: {
+                    appstore: "https://apps.apple.com/us/app/wamda-%D9%88%D9%85%D8%B6%D8%A9/id6741490214",
+                    playstore: "https://play.google.com/store/apps/developer?id=M1Hisham"
+                }
+            },
+            {
+                id: "alkarma",
+                name: "Al Karma - الكرمة (Smart Compound QR Access Control)",
+                headline: "Tri-Role Residential Gate Management & Real-Time QR Gate Passes",
+                category: "security, ecosystems, mobile",
+                icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/60/17/fa/6017fa52-4fea-9216-01ae-e240c8ad84d2/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/1200x630wa.png",
+                categoryBadge: "IoT & Gate Access Control",
+                poster: "assets/projects/alkarma/poster alkarma.png",
+                description: "End-to-end compound management suite consisting of Resident Owner App, Gate Security App, and Management Admin Panel. Built with lightning-fast encrypted QR code issuance, offline gate verification, car license plate recognition, and real-time visitor logs.",
+                tech: ["Flutter", "Firebase", "QR Code Engine", "Clean Architecture", "Role-Based Access"],
+                screens: [
+                    "assets/projects/alkarma/poster alkarma.png",
+                    "assets/projects/alkarma/iOS screen preview/01 - مالك الكمبوند.png",
+                    "assets/projects/alkarma/iOS screen preview/02 - إنشاء QR للزائر.png",
+                    "assets/projects/alkarma/iOS screen preview/03 - تحقق الأمن عند البوابة.png",
+                    "assets/projects/alkarma/iOS screen preview/04 - البحث بلوحة السيارة.png",
+                    "assets/projects/alkarma/iOS screen preview/05 - لوحة الإدارة والتقارير.png"
+                ],
+                links: {
+                    appstore: "https://apps.apple.com/us/app/al-karma-%D8%A7%D9%84%D9%83%D8%B1%D9%85%D8%A9/id6768489422",
+                    playstore: "https://play.google.com/store/apps/details?id=dev.m1hisham.alkarma"
+                }
+            },
+            {
+                id: "mzaodin",
+                name: "Mzaodin - مزاودين (Real-Time Live Auction Platform)",
+                headline: "Sub-Second WebSocket Bidding Engine with Tap Payment Settlement",
+                category: "realtime, mobile",
+                icon: "https://play-lh.googleusercontent.com/--Qxy0Uzu1DFX4zNjdevoi29vjvTmTDR87j3AuGkGGtA7q4NWr7q6EjHPQTIY97Ibf4Ic7xm-gNSvisyBTSW=s180",
+                categoryBadge: "Live Bidding Engine",
+                poster: "assets/projects/wamda/01-home.png", // fallback preview
+                description: "High-concurrency live bidding engine engineered with sub-second WebSocket synchronization, real-time bid conflict resolution, automated auction countdowns, and PCI-compliant payment checkout via Tap Payments.",
+                tech: ["Flutter", "MVVM", "Cubit", "WebSockets", "Tap Payments", "Laravel REST API"],
+                screens: [],
                 links: {
                     appstore: "https://apps.apple.com/us/app/mzaodin-%D9%85%D8%B2%D8%A7%D9%88%D8%AF%D9%8A%D9%86/id6746045792",
                     playstore: "https://play.google.com/store/apps/details?id=com.mzaodin.app"
                 }
             },
             {
-                name: "QR-Based Compound Gate Management System (Al-Karma - الكرمة)",
-                description: "Three separate apps (Owner / Admin / Security) prototyped and scaffolded using AI tooling, with full QR scan pipelines and role-based access control delivered at high speed.",
-                tech: "Flutter, Firebase, Multi-Role, Clean Architecture",
-                category: "ai-assisted, mobile",
+                id: "egysystem",
+                name: "EGYsystem | Cloud Sports Academy Management",
+                headline: "Full-Scale Multi-Tenant SaaS Platform for Sports Clubs & Academies",
+                category: "saas, web",
+                icon: "https://egy-system-club.com/logo.jpg",
+                categoryBadge: "Cloud SaaS Platform",
+                poster: "assets/projects/egysystem/logo.jpg",
+                description: "All-in-one cloud SaaS management platform engineered for sports academies and clubs. Features dynamic athlete rosters, subscription renewals, automated QR attendance, coach scheduling, and financial analytics with Supabase.",
+                tech: ["Supabase", "Cloud Architecture", "JavaScript", "Multi-Tenant SaaS", "REST APIs"],
+                screens: [
+                    "assets/projects/egysystem/logo.jpg"
+                ],
                 links: {
-                    appstore: "https://apps.apple.com/us/app/al-karma-%D8%A7%D9%84%D9%83%D8%B1%D9%85%D8%A9/id6768489422"
+                    website: "https://egy-system-club.com/landing"
                 }
             },
             {
-                name: "E-Commerce Multi-App Ecosystem",
-                description: "Customer, Driver, and Store apps designed and generated with AI-assisted architecture sessions, shipped to both stores with synchronized real-time order management.",
-                tech: "Flutter, Firebase, Clean Architecture",
-                category: "ai-assisted, mobile",
-                links: {}
+                id: "sign-realestate",
+                name: "Sign for Real Estate & Field Workforce",
+                headline: "GPS-Geofenced Attendance & Digital Contract Signing Suite",
+                category: "security, mobile",
+                icon: "assets/projects/sign-realestate/logo.png",
+                categoryBadge: "Enterprise Contract & Geofence",
+                poster: "assets/projects/sign-realestate/poster1.png",
+                description: "Field workforce attendance verification and real estate contract signing platform featuring precision GPS geofencing radius checks, offline biometric verification, dynamic PDF contract generation, and executive audit trails.",
+                tech: ["Flutter", "Geofence GPS", "PDF Signatures", "Biometrics", "RESTful API"],
+                screens: [
+                    "assets/projects/sign-realestate/poster1.png",
+                    "assets/projects/sign-realestate/ads.png",
+                    "assets/projects/sign-realestate/iOS/01_sign_for_real_estate 1.png",
+                    "assets/projects/sign-realestate/iOS/02_gps_check_in 1.png",
+                    "assets/projects/sign-realestate/iOS/03_work_from_home 1.png",
+                    "assets/projects/sign-realestate/iOS/04_attendance_history 1.png",
+                    "assets/projects/sign-realestate/iOS/05_admin_control 1.png"
+                ],
+                links: {
+                    appstore: "https://apps.apple.com/app/id6763954450",
+                    playstore: "https://play.google.com/store/apps/details?id=dev.m1hisham.signforrealestate&pcampaignid=web_share"
+                }
             },
             {
-                name: "Medaad - مـــداد",
-                description: "Secure teacher-student platform with screen protection for educational content.",
-                tech: "Flutter, Supabase, Secure iOS & Android",
-                category: "mobile",
+                id: "medaad",
+                name: "Medaad - مـــداد (DRM Protected EdTech)",
+                headline: "High-Security Video Streaming & Anti-Screen-Capture Platform",
+                category: "security, mobile",
+                icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ea/df/9b/eadf9b9b-6664-6405-1aa3-e9253d2086f5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/1200x630wa.png",
+                categoryBadge: "DRM Screen Protection",
+                poster: "assets/projects/medaad/WhatsApp Image 2026-09-02 at 3.23.19 PM.jpeg",
+                description: "High-security educational video streaming and exam platform featuring hardware-level anti-screen recording, dynamic watermark watermarking, encrypted offline caching, and teacher management dashboards on Supabase.",
+                tech: ["Flutter", "Supabase", "DRM Screen Shield", "HLS Video Streaming", "Biometric Auth"],
+                screens: [
+                    "assets/projects/medaad/WhatsApp Image 2026-09-02 at 3.23.19 PM.jpeg",
+                    "assets/projects/medaad/WhatsApp Image 2026-09-02 at 3.23.19 PM-2.jpeg"
+                ],
                 links: {
                     appstore: "https://apps.apple.com/us/app/medaad-%D9%85%D9%80%D9%80%D9%80%D8%AF%D8%A7%D8%AF/id6758565779",
                     playstore: "https://play.google.com/store/apps/details?id=medaad.app.com"
                 }
             },
             {
-                name: "Sign for Real Estate",
-                description: "Real estate signing application allowing secure property contract creation, digital signature pipelines, and transaction tracking.",
-                tech: "Flutter, RESTful API, PDF Signing, iOS",
+                id: "planetinfinity",
+                name: "Planet Infinity (Global Tourism & Booking)",
+                headline: "International Travel, Flight Itinerary & Guided Tours App",
                 category: "mobile",
+                icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9a/d3/49/9ad34976-796b-28ba-7649-822eb23ce672/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/1200x630wa.png",
+                categoryBadge: "Travel & Booking",
+                poster: "assets/projects/planet-infinity/IMG_7397.PNG",
+                description: "Interactive tour and vacation booking mobile application featuring rich destination media catalogs, multi-currency conversion, real-time schedule syncing, and digital voucher checkout.",
+                tech: ["Flutter", "Clean Architecture", "REST API", "Payment Gateways"],
+                screens: [
+                    "assets/projects/planet-infinity/IMG_7397.PNG",
+                    "assets/projects/planet-infinity/IMG_7398.PNG",
+                    "assets/projects/planet-infinity/IMG_7399.PNG",
+                    "assets/projects/planet-infinity/IMG_7400.PNG",
+                    "assets/projects/planet-infinity/IMG_7401.PNG"
+                ],
                 links: {
-                    appstore: "https://apps.apple.com/app/id6763954450"
+                    appstore: "https://apps.apple.com/us/developer/mohamed-hisham/id1820654983",
+                    playstore: "https://play.google.com/store/apps/details?id=dev.m1hisham.planetinfinity"
                 }
             },
             {
-                name: "Café & Restaurant Dashboard + Interactive Menu",
-                description: "Fully web-based order management system built rapidly using vibe coding — AI-generated UI components, Supabase schema design, and real-time menu updates.",
-                tech: "React, Supabase, Cloudflare",
-                category: "ai-assisted, web",
-                links: {}
-            },
-            {
-                name: "Enterprise CRM Mobile Application",
-                description: "Leveraged AI pair programming to maintain strict Clean Architecture layering across a complex CRM system while accelerating feature development cycles.",
-                tech: "Flutter, Clean Architecture, Cubit, RESTful API, Laravel",
-                category: "ai-assisted, mobile",
-                links: {}
-            },
-            {
-                name: "SafeSpace",
-                description: "Safety tracking application in Germany with live location, emergency alerts, and secure chat system.",
-                tech: "Flutter, MVVM, GetX, Firebase, Maps, Chat",
-                category: "mobile",
+                id: "dahab-driver",
+                name: "Dahab Driver (Ride & Delivery Logistics)",
+                headline: "Real-Time Driver Fleet Management & Background Route Navigation",
+                category: "ecosystems, realtime, mobile",
+                icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5c/5c/5a/5c5c5ac5-4568-1697-6198-1a0ee448612b/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/1200x630wa.png",
+                categoryBadge: "Fleet & Driver Logistics",
+                poster: "assets/projects/wamda/02-restaurant.png",
+                description: "Dedicated driver and delivery captain application with low-latency background geolocation tracking, live turn-by-turn route calculation, order batching, and automated earnings calculation.",
+                tech: ["Flutter", "Background Geolocation", "Google Maps SDK", "WebSockets"],
+                screens: [],
                 links: {
-                    appstore: "https://apps.apple.com/app/id6742404101"
+                    appstore: "https://apps.apple.com/us/developer/mohamed-hisham/id1820654983",
+                    playstore: "https://play.google.com/store/apps/details?id=dev.m1hisham.dahabDriver"
                 }
             },
             {
-                name: "K&O Dress Rental",
-                description: "Dress rental management system with booking calendar and client notifications for seamless styling experiences.",
-                tech: "Flutter, MVVM, Provider, Firebase Blaze",
-                category: "mobile",
+                id: "laylaam",
+                name: "Laylaam - ليلام (Live Luxury Auctions)",
+                headline: "Real-Time High-Value Collectibles Bidding & Flash Auctions",
+                category: "realtime, mobile",
+                icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a5/ce/62/a5ce62a1-5aef-bc35-b20d-76751f257086/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/1200x630wa.png",
+                categoryBadge: "Luxury E-Commerce & Auctions",
+                poster: "assets/projects/wamda/03-categories.png",
+                description: "Exclusive fashion and luxury goods bidding mobile application with real-time synchronized timers, push bid notifications, and instant pre-authorized credit card billing.",
+                tech: ["Flutter", "WebSockets", "Cubit", "PCI-DSS Payment Gateways"],
+                screens: [],
                 links: {
-                    appstore: "https://apps.apple.com/app/id6747298922"
+                    appstore: "https://apps.apple.com/us/developer/mohamed-hisham/id1820654983"
+                }
+            },
+            {
+                id: "alhaa",
+                name: "Alhaa & AlHaa Doctors (Telemedicine Suite)",
+                headline: "Encrypted Video Consultations, Digital Prescriptions & Scheduling",
+                category: "security, mobile",
+                icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b6/68/e5/b668e5a4-4ae8-94e5-c19e-45301a6657c7/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/1200x630wa.png",
+                categoryBadge: "Telemedicine & Health Suite",
+                poster: "assets/projects/wamda/04-profile.png",
+                description: "Dual mobile application ecosystem connecting patients with verified medical specialists. Features end-to-end encrypted chat consultations, digital prescriptions, and EHR patient history.",
+                tech: ["Flutter", "HIPAA Compliant Cloud", "Secure Auth", "Clean Architecture"],
+                screens: [],
+                links: {
+                    appstore: "https://apps.apple.com/us/developer/mohamed-hisham/id1820654983"
+                }
+            },
+            {
+                id: "hajaj-crm",
+                name: "Hajaj System Enterprise CRM",
+                headline: "Offline-First Enterprise Field Sales & Pipeline Mobile Application",
+                category: "saas, mobile",
+                icon: "https://play-lh.googleusercontent.com/VpXw3T5wCfl10H33V6o7kglBm7SOXi0QVXH7UrIhputOlua-jdfOc3_WXQYzC8OzBMRh4sU6Afn7V4FrxJ0aDg=s180",
+                categoryBadge: "Enterprise Sales CRM",
+                poster: "assets/projects/sign-realestate/poster1.png",
+                description: "Enterprise sales management mobile application engineered for field agents with local SQLite cache synchronization, sales pipeline tracking, customer interactions, and automated reporting.",
+                tech: ["Flutter", "Offline SQLite Cache", "REST API", "Clean Architecture"],
+                screens: [],
+                links: {
+                    playstore: "https://play.google.com/store/apps/details?id=com.hajajsystem.crm"
+                }
+            },
+            {
+                id: "safespace",
+                name: "SafeSpace (Emergency Response & Safety Companion)",
+                headline: "Geofenced Emergency Alerts & Encrypted Responder Coordination",
+                category: "security, realtime, mobile",
+                icon: "",
+                statusBadge: "Verified Contract",
+                categoryBadge: "Safety & Emergency Response",
+                poster: "",
+                description: "Enterprise emergency response and safety companion platform developed for SafeSpace GmbH (Munich, Germany). Features precision geofenced perimeter alerts, silent SOS triggers, encrypted responder chat coordination, and high-reliability background telemetry.",
+                tech: ["Flutter", "MVVM", "GetX", "Firebase Blaze", "Live Geolocation", "Munich, Germany"],
+                screens: [],
+                links: {
+                    certificate: "https://drive.google.com/file/d/1vrw_wzuhXpKAR7dpcVXUt-HQb-lnBQHe/view?pli=1"
+                }
+            },
+            {
+                id: "yalla-jayak",
+                name: "يلا جايك (Yalla Jayak - Express Delivery)",
+                headline: "Rapid Food & Grocery Ordering Application with Multi-Merchant Routing",
+                category: "ecosystems, mobile",
+                icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b7/f3/47/b7f3476d-ec75-ddf7-7311-cc75902e1d21/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/1200x630wa.png",
+                categoryBadge: "On-Demand Express Delivery",
+                poster: "assets/projects/wamda/05-customize-meal.png",
+                description: "On-demand food and convenience delivery application with customized order options, live cart calculations, scheduled delivery slots, and automated dispatch to kitchen partners.",
+                tech: ["Flutter", "Clean Architecture", "Firebase", "REST APIs"],
+                screens: [],
+                links: {
+                    appstore: "https://apps.apple.com/us/developer/mohamed-hisham/id1820654983"
+                }
+            },
+            {
+                id: "overdeal",
+                name: "OverDeal - أوفردييل (Deals Marketplace)",
+                headline: "Flash Deals & Discount Aggregation with Merchant Voucher Verification",
+                category: "mobile",
+                icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f4/53/96/f45396ac-de6e-b6bb-4685-079aec0c400e/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/1200x630wa.png",
+                categoryBadge: "Deals & Coupons Marketplace",
+                poster: "assets/projects/wamda/06-menu.png",
+                description: "Commercial discount aggregation and flash deals mobile application with coupon validation QR scanners and geolocation-based store offers.",
+                tech: ["Flutter", "State Management", "RESTful API"],
+                screens: [],
+                links: {
+                    appstore: "https://apps.apple.com/us/developer/mohamed-hisham/id1820654983"
                 }
             }
         ];
 
-        const typingStack = [
-            "Flutter & Cross-Platform",
-            "AI-Assisted Development",
-            "Clean Architecture",
-            "SaaS Architectures",
-            "Supabase & Firebase"
-        ];
+        // ==================== RENDERING & FILTERING ====================
+        const projectsGrid = document.getElementById('projectsGrid');
+        const filterBtns = document.querySelectorAll('.tab-btn');
 
-        // ==================== TYPING EFFECT ====================
-        let currentTextIndex = 0;
-        let currentCharIndex = 0;
-        const typingElement = document.getElementById('typingText');
-        const typingSpeed = 75;
-        const deleteSpeed = 40;
-        const delayBetweenWords = 2000;
-
-        function typeText() {
-            const currentText = typingStack[currentTextIndex];
-
-            if (currentCharIndex < currentText.length) {
-                typingElement.textContent += currentText[currentCharIndex];
-                currentCharIndex++;
-                setTimeout(typeText, typingSpeed);
-            } else {
-                setTimeout(deleteText, delayBetweenWords);
-            }
+        // Calculate and display badge counts
+        function updateTabCounts() {
+            document.getElementById('countAll').textContent = projectsData.length;
+            document.getElementById('countEco').textContent = projectsData.filter(p => p.category.includes('ecosystems')).length;
+            document.getElementById('countReal').textContent = projectsData.filter(p => p.category.includes('realtime')).length;
+            document.getElementById('countSec').textContent = projectsData.filter(p => p.category.includes('security')).length;
+            document.getElementById('countSaas').textContent = projectsData.filter(p => p.category.includes('saas')).length;
         }
 
-        function deleteText() {
-            const currentText = typingStack[currentTextIndex];
-
-            if (currentCharIndex > 0) {
-                typingElement.textContent = currentText.substring(0, currentCharIndex - 1);
-                currentCharIndex--;
-                setTimeout(deleteText, deleteSpeed);
-            } else {
-                currentTextIndex = (currentTextIndex + 1) % typingStack.length;
-                setTimeout(typeText, 500);
-            }
-        }
-
-        // Start typing effect
-        typeText();
-
-        // ==================== PROJECTS GRID & FILTER GENERATION ====================
-        function generateProjectsGrid(filter = 'all') {
-            const projectsGrid = document.getElementById('projectsGrid');
+        function renderProjects(filter = 'all') {
             projectsGrid.innerHTML = '';
 
-            projects.forEach(project => {
-                // Category matching
-                if (filter !== 'all' && !project.category.split(', ').some(c => c.trim() === filter)) {
-                    return;
-                }
+            const filtered = filter === 'all' 
+                ? projectsData 
+                : projectsData.filter(p => p.category.split(',').map(c => c.trim()).includes(filter));
 
+            filtered.forEach(project => {
                 const card = document.createElement('div');
                 card.className = 'project-card';
 
-                let linksHTML = '<div class="project-links">';
+                // Tech badges
+                const techBadges = project.tech.map(t => `<span class="tag-badge">${t}</span>`).join('');
+
+                // Status badge
+                const statusText = project.statusBadge || "Production Live";
+                const statusClass = project.statusBadge ? "card-status-badge status-verified" : "card-status-badge";
+
+                // App Icon HTML
+                let iconWrapperHTML = '';
+                if (project.icon) {
+                    iconWrapperHTML = `
+                        <div class="app-icon-wrapper" ${project.screens && project.screens.length > 0 ? `onclick="openLightbox('${project.id}')" title="Click to view screenshots"` : ''}>
+                            <img src="${project.icon}" alt="${project.name} Icon" class="app-icon-img" loading="lazy" onerror="this.src='assets/projects/sign-realestate/logo.png'">
+                        </div>
+                    `;
+                } else {
+                    iconWrapperHTML = `
+                        <div class="app-icon-wrapper app-icon-placeholder" title="Verified Enterprise Project">
+                            <svg viewBox="0 0 24 24" class="placeholder-svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                    `;
+                }
+
+                // Action links
+                let actionsHTML = '';
                 if (project.links.appstore) {
-                    linksHTML += `<a href="${project.links.appstore}" target="_blank" class="project-link">App Store</a>`;
+                    actionsHTML += `
+                        <a href="${project.links.appstore}" target="_blank" class="store-btn store-apple">
+                            <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.86c.66-.82 1.11-1.96.99-3.1-.96.04-2.12.65-2.8 1.45-.6.69-1.12 1.84-.98 2.95 1.07.08 2.13-.57 2.79-1.3z"/></svg>
+                            <span>App Store</span>
+                        </a>
+                    `;
                 }
                 if (project.links.playstore) {
-                    linksHTML += `<a href="${project.links.playstore}" target="_blank" class="project-link">Play Store</a>`;
+                    actionsHTML += `
+                        <a href="${project.links.playstore}" target="_blank" class="store-btn store-play">
+                            <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.41 2.41 0 0 1-.61-.395V2.21c.19-.16.398-.293.609-.396zm11.24 11.24l2.12 2.12-10.45 6.035 8.33-8.155zm2.842-1.768l2.766 1.603a1.447 1.447 0 0 1 0 2.222l-2.766 1.603-2.112-2.112 2.112-3.316zm-2.842-1.546L6.52 1.585l10.45 6.035-2.12 2.12z"/></svg>
+                            <span>Google Play</span>
+                        </a>
+                    `;
                 }
                 if (project.links.website) {
-                    linksHTML += `<a href="${project.links.website}" target="_blank" class="project-link">Website</a>`;
+                    actionsHTML += `
+                        <a href="${project.links.website}" target="_blank" class="store-btn store-web">
+                            <span>🌐 Live Platform</span>
+                        </a>
+                    `;
                 }
-                linksHTML += '</div>';
+                if (project.links.certificate) {
+                    actionsHTML += `
+                        <a href="${project.links.certificate}" target="_blank" class="store-btn store-cert">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            <span>📜 Experience Certificate</span>
+                        </a>
+                    `;
+                }
 
-                const techTags = project.tech.split(', ').map(tech =>
-                    `<span class="tech-tag">${tech.trim()}</span>`
-                ).join('');
+                // Add gallery preview button if project has screens
+                if (project.screens && project.screens.length > 0) {
+                    actionsHTML += `
+                        <button class="store-btn store-preview" onclick="openLightbox('${project.id}')">
+                            <span>🖼️ ${project.screens.length} Screens</span>
+                        </button>
+                    `;
+                }
 
                 card.innerHTML = `
-                    <div class="project-name">${project.name}</div>
-                    <div class="project-description">${project.description}</div>
-                    <div class="project-tech">${techTags}</div>
-                    ${project.links.appstore || project.links.playstore || project.links.website ? linksHTML : ''}
+                    <div class="card-top">
+                        ${iconWrapperHTML}
+                        <div class="card-meta">
+                            <span class="card-category-tag">${project.categoryBadge}</span>
+                            <span class="${statusClass}">${statusText}</span>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <h3 class="card-title">${project.name}</h3>
+                        <div class="card-headline">${project.headline}</div>
+                        <p class="card-desc">${project.description}</p>
+                        <div class="card-tags">${techBadges}</div>
+                        <div class="card-actions">${actionsHTML}</div>
+                    </div>
                 `;
 
                 projectsGrid.appendChild(card);
             });
         }
 
-        // Setup filter click listeners
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        filterButtons.forEach(btn => {
+        // Filter tab click handlers
+        filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                filterButtons.forEach(b => b.classList.remove('active'));
+                filterBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-                const filter = btn.getAttribute('data-filter');
-                generateProjectsGrid(filter);
+                const filterVal = btn.getAttribute('data-filter');
+                renderProjects(filterVal);
             });
         });
 
-        // Initialize projects grid
-        generateProjectsGrid();
+        // Initialize projects and counts
+        updateTabCounts();
+        renderProjects('all');
 
-        // ==================== SCROLL NAVBAR STYLE ====================
+        // ==================== SCREENSHOT GALLERY LIGHTBOX ====================
+        const modal = document.getElementById('screenshotModal');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+        const modalDoneBtn = document.getElementById('modalDoneBtn');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc = document.getElementById('modalDesc');
+        const modalMainImg = document.getElementById('modalMainImg');
+        const modalThumbnails = document.getElementById('modalThumbnails');
+        const modalLinks = document.getElementById('modalLinks');
+
+        function openLightbox(projectId) {
+            const project = projectsData.find(p => p.id === projectId);
+            if (!project) return;
+
+            modalTitle.textContent = project.name;
+            modalDesc.textContent = project.headline;
+
+            const screens = (project.screens && project.screens.length > 0) 
+                ? project.screens 
+                : [project.poster || 'assets/projects/wamda/01-home.png'];
+
+            // Set main image to first screen
+            modalMainImg.src = screens[0];
+
+            // Render thumbnails
+            modalThumbnails.innerHTML = '';
+            screens.forEach((screenSrc, index) => {
+                const thumb = document.createElement('img');
+                thumb.src = screenSrc;
+                thumb.className = `modal-thumb ${index === 0 ? 'active' : ''}`;
+                thumb.onclick = () => {
+                    modalMainImg.src = screenSrc;
+                    document.querySelectorAll('.modal-thumb').forEach(t => t.classList.remove('active'));
+                    thumb.classList.add('active');
+                };
+                modalThumbnails.appendChild(thumb);
+            });
+
+            // Store links inside modal
+            let linksHTML = '';
+            if (project.links.appstore) {
+                linksHTML += `<a href="${project.links.appstore}" target="_blank" class="store-btn store-apple">Download on App Store</a>`;
+            }
+            if (project.links.playstore) {
+                linksHTML += `<a href="${project.links.playstore}" target="_blank" class="store-btn store-play">Get on Google Play</a>`;
+            }
+            if (project.links.website) {
+                linksHTML += `<a href="${project.links.website}" target="_blank" class="store-btn store-web">Visit Live Platform</a>`;
+            }
+            if (project.links.certificate) {
+                linksHTML += `<a href="${project.links.certificate}" target="_blank" class="store-btn store-cert">📜 Experience Certificate</a>`;
+            }
+            modalLinks.innerHTML = linksHTML;
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        modalCloseBtn.addEventListener('click', closeLightbox);
+        modalDoneBtn.addEventListener('click', closeLightbox);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+
+        // ==================== ROTATING HERO MOCKUP SCREENS ====================
+        const heroMockup = document.getElementById('heroMockupScreen');
+        
+        /**
+         * List of all mockup screens inside 'assets/view mockups/'.
+         * Adding new images to 'assets/view mockups/' will automatically cycle if listed below
+         * or if updated in 'assets/view mockups/manifest.json'.
+         */
+        const defaultMockupScreens = [
+            "assets/view mockups/02 - إنشاء QR للزائر.png",
+            "assets/view mockups/03 - تحقق الأمن عند البوابة.png",
+            "assets/view mockups/03_work_from_home 1.png",
+            "assets/view mockups/04 - البحث بلوحة السيارة.png",
+            "assets/view mockups/ChatGPT Image Aug 30, 2026, 01_26_36 PM.png",
+            "assets/view mockups/ChatGPT Image Aug 30, 2026, 01_35_24 PM (2).png",
+            "assets/view mockups/IMG_7399.PNG",
+            "assets/view mockups/IMG_7401.PNG",
+            "assets/view mockups/IMG_7529.PNG",
+            "assets/view mockups/IMG_9026.jpg",
+            "assets/view mockups/IMG_9027.jpg",
+            "assets/view mockups/Screenshot 2026-08-17 at 4.09.50 PM.png",
+            "assets/view mockups/Screenshot_1776620544.png",
+            "assets/view mockups/Screenshot_1778283557.png"
+        ];
+
+        let heroScreens = defaultMockupScreens.map(s => encodeURI(s));
+        let currentScreenIdx = 0;
+
+        // Auto-fetch manifest if running on server to detect newly added images automatically
+        fetch(encodeURI('assets/view mockups/manifest.json'))
+            .then(res => res.json())
+            .then(files => {
+                if (Array.isArray(files) && files.length > 0) {
+                    heroScreens = files.map(f => encodeURI(`assets/view mockups/${f}`));
+                }
+            })
+            .catch(() => {});
+
+        // Set initial mockup image
+        if (heroMockup && heroScreens.length > 0) {
+            heroMockup.src = heroScreens[0];
+        }
+
+        // Cycle through all images smoothly
+        setInterval(() => {
+            if (!heroMockup || heroScreens.length === 0) return;
+            currentScreenIdx = (currentScreenIdx + 1) % heroScreens.length;
+            heroMockup.style.opacity = '0';
+            setTimeout(() => {
+                heroMockup.src = heroScreens[currentScreenIdx];
+                heroMockup.style.opacity = '1';
+            }, 300);
+        }, 3600);
+
+        // ==================== NAVBAR SCROLL & ACTIVE LINK ====================
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
+            if (window.scrollY > 40) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
             }
         });
 
-        // ==================== SCROLL ANIMATIONS (IntersectionObserver) ====================
-        const observerOptions = {
-            threshold: 0.05,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('open');
+            navMenu.classList.toggle('active');
+        });
 
-        const observer = new IntersectionObserver(function (entries) {
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('open');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Intersection Observer for Reveal Animations
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('loaded');
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.05, rootMargin: '0px 0px -50px 0px' });
 
-        document.querySelectorAll('.section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // ==================== NAVIGATION ACTIVE LINK & SCROLL SPY ====================
-        const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('section');
-
-        window.addEventListener('scroll', () => {
-            let current = 'hero';
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-
-                if (window.scrollY >= sectionTop - 220) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // ==================== SMOOTH SCROLL FOR LINKS ====================
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const offset = 80; // height of fixed navbar
-                    const bodyRect = document.body.getBoundingClientRect().top;
-                    const targetRect = target.getBoundingClientRect().top;
-                    const targetPosition = targetRect - bodyRect;
-                    const offsetPosition = targetPosition - offset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+        document.querySelectorAll('.section').forEach(sec => observer.observe(sec));
     </script>
 </body>
 
